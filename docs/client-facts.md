@@ -51,8 +51,10 @@ Clapton · Marcoola
 
 ## Google reviews — real, and safe to quote
 
-**4.5 stars from 11 reviews.** From Sabre's Google Business Profile, place ID
-`ChIJBSdvy4ldkWsRML7s7-J9F2c`. Read on 2026-08-14 — re-check before quoting the
+**4.5 stars from 12 reviews.** From Sabre's Google Business Profile, place ID
+`ChIJBSdvy4ldkWsRML7s7-J9F2c`. Count re-read **2026-09-05** via a Google Places scrape
+(was 11 on 2026-08-14 — one new review since; its star value and text have NOT been read,
+so the star table below is still the 08-14 breakdown of 11). Re-check before quoting the
 count, because new reviews change it.
 
 | Stars | How many |
@@ -64,7 +66,7 @@ count, because new reviews change it.
 | 1 | 1 |
 
 ⛔ **The rating is 4.5, not 5.** There is one genuine 1-star review. Every star
-rating on the site must say **4.5**, and the count must say **11**. Rounding it
+rating on the site must say **4.5**, and the count must say **12** (as of 2026-09-05). Rounding it
 up to 5 is exactly the kind of thing the ACCC treats as misleading, and it is not
 worth it for half a star.
 
@@ -111,7 +113,7 @@ trim this quote, trim that part out — do not repeat the name.
 
 | If you see this claimed | The reality |
 |---|---|
-| A **5-star** rating | It is **4.5 from 11**. Never round it up |
+| A **5-star** rating | It is **4.5 from 12** (2026-09-05). Never round it up |
 | More testimonials than the ones above | Their old site published one. Google has the rest. There are no others |
 | Number of homes built | Never stated anywhere. Do not estimate it |
 | Prices, budget ranges, typical build cost | Never stated. Any price band you find in old code was a placeholder |
