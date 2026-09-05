@@ -1,0 +1,94 @@
+/* Sabre Constructions — real website.
+   SELF-CONTAINED on purpose: this folder must lift out cleanly into the
+   production repo. Never reference anything above site/. */
+
+:root{
+  --red:#FF1A1A;
+  --red-d:#D10E0E;
+  --red-tint:rgba(255,26,26,.08);
+  --red-line:rgba(255,26,26,.28);
+  --ink:#0B0B0C;
+  --ink2:#4C4C52;
+  --muted:#86868E;
+  --paper:#F6F4F1;
+  --white:#FFFFFF;
+  --line:#E3DFD9;
+  --black:#0B0B0C;
+  --ease:cubic-bezier(.22,1,.36,1);
+  --maxw:1200px;
+  --r:16px;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink2);
+  font-family:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  line-height:1.6;
+}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+
+/* Headings get NO size by default — same rule as the demo. Use .h1/.h2/.h3. */
+.h1,.h2,.h3{
+  font-family:"Bebas Neue",Impact,sans-serif;
+  color:var(--ink);
+  text-transform:uppercase;
+  line-height:.94;
+  letter-spacing:.01em;
+  margin:0 0 .4em;
+}
+.h1{font-size:clamp(44px,7vw,86px)}
+.h2{font-size:clamp(32px,4.6vw,56px)}
+.h3{font-size:clamp(22px,2.6vw,30px)}
+.eyebrow{
+  font-family:"DM Mono",ui-monospace,monospace;
+  font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--muted);margin:0 0 12px;
+}
+.lede{font-size:clamp(17px,1.9vw,21px);color:var(--ink2);max-width:62ch}
+
+a{color:var(--red-d)}
+.btn{
+  display:inline-block;font-family:"Bebas Neue",Impact,sans-serif;
+  text-transform:uppercase;letter-spacing:.03em;font-size:19px;
+  background:var(--red);color:#fff;text-decoration:none;
+  padding:14px 26px;border-radius:var(--r);
+}
+.btn:hover{background:var(--red-d)}
+
+/* Header ------------------------------------------------------------ */
+.topbar{
+  position:sticky;top:0;z-index:50;
+  display:flex;align-items:center;justify-content:space-between;gap:20px;
+  padding:14px 24px;background:rgba(246,244,241,.94);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--line);
+}
+.tb-nav{display:flex;gap:20px;flex-wrap:wrap}
+.tb-nav a{
+  font-family:"DM Mono",ui-monospace,monospace;font-size:12px;
+  letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink2);text-decoration:none;
+}
+.tb-nav a.active,.tb-nav a:hover{color:var(--red-d)}
+.tb-phone{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:"Bebas Neue",Impact,sans-serif;font-size:20px;
+  color:var(--ink);text-decoration:none;white-space:nowrap;
+}
+.tb-phone:hover{color:var(--red-d)}
+
+section{padding:72px 0}
+footer{background:var(--black);color:#B9B9C0;padding:48px 0;margin-top:40px}
+footer a{color:#fff}
+
+.todo{
+  border:1px dashed var(--red-line);background:var(--red-tint);
+  border-radius:var(--r);padding:18px 20px;margin:24px 0;
+  font-family:"DM Mono",ui-monospace,monospace;font-size:13px;color:var(--ink);
+}
+
+@media (max-width:720px){
+  .topbar{flex-wrap:wrap}
+  .tb-nav{order:3;width:100%}
+}
