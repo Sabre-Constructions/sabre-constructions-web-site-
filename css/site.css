@@ -92,3 +92,32 @@ footer a{color:#fff}
   .topbar{flex-wrap:wrap}
   .tb-nav{order:3;width:100%}
 }
+
+/* Enquiry form --------------------------------------------------------- */
+.form{max-width:680px;margin-top:32px}
+.form fieldset{border:0;padding:0;margin:0 0 28px}
+.form legend,.form label.q{
+  display:block;font-family:"Plus Jakarta Sans",system-ui,sans-serif;
+  font-weight:600;color:var(--ink);margin:0 0 10px;font-size:17px;
+}
+.form .hint{font-size:14px;color:var(--muted);margin:-6px 0 10px}
+.opts{display:grid;gap:8px}
+.opts label{
+  display:flex;align-items:center;gap:12px;cursor:pointer;
+  background:var(--white);border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px;color:var(--ink);font-size:16px;
+}
+.opts label:hover{border-color:var(--red-line)}
+.opts input{accent-color:var(--red);width:18px;height:18px;margin:0}
+.opts input:checked+span{font-weight:600}
+.form input[type=text],.form input[type=email],.form input[type=tel],.form select{
+  width:100%;font:inherit;font-size:16px;color:var(--ink);
+  background:var(--white);border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px;
+}
+.form input:focus,.form select:focus{outline:2px solid var(--red);outline-offset:1px;border-color:transparent}
+.form button.btn{border:0;cursor:pointer;font-size:19px}
+.form .status{margin-top:16px;font-size:15px;color:var(--ink)}
+.form .status.ok{color:#1F7A3A;font-weight:600}
+.form .status.err{color:var(--red-d)}
+.form .gotcha{position:absolute;left:-9999px}

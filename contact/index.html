@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../css/site.css?v=1">
+<link rel="stylesheet" href="../css/site.css?v=2">
 </head>
 <body>
 
@@ -33,16 +33,105 @@
 <main>
   <section>
     <div class="wrap">
-      <p class="eyebrow">Get in touch</p>
-      <h1 class="h1">Talk to<br>a builder</h1>
-      <p class="lede">Placeholder. Nothing on this page is final copy.</p>
+      <p class="eyebrow">Free block check</p>
+      <h1 class="h1">Can we<br>knock it down?</h1>
+      <p class="lede">Two quick questions about the house, then how to reach you. We'll tell you whether a rebuild is realistic on your block before you spend anything.</p>
 
-      <div class="todo">TO BUILD &mdash; CONTACT. Needs the working lead form (open item 2 - currently sends NOTHING). Real details are in reference/client-facts.md: 07 3823 3200, 3/73-75 Steel St Capalaba QLD 4157, Mon-Fri 8am-4pm, QBCC 328475.</div>
+      <form class="form" id="enquiry" action="https://formspree.io/f/mwlkqyqn" method="POST">
+        <input type="hidden" name="_subject" value="Website enquiry — sabreconstructions.com.au">
+        <input type="text" name="_gotcha" class="gotcha" tabindex="-1" autocomplete="off">
 
-      <p><a class="btn" href="../contact/">Book a site visit</a></p>
+        <fieldset>
+          <legend>Which best describes you?</legend>
+          <div class="opts">
+            <label><input type="radio" name="describes" value="I own a house I'd like to replace" required><span>I own a house I'd like to replace</span></label>
+            <label><input type="radio" name="describes" value="I'm buying a block"><span>I'm buying a block</span></label>
+            <label><input type="radio" name="describes" value="I'm weighing up renovating"><span>I'm weighing up renovating</span></label>
+            <label><input type="radio" name="describes" value="Just researching"><span>Just researching</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Roughly when was the house built?</legend>
+          <p class="hint">Houses from before 1947 can fall under Brisbane's character rules. This is the first thing we check.</p>
+          <div class="opts">
+            <label><input type="radio" name="built" value="Before 1947" required><span>Before 1947</span></label>
+            <label><input type="radio" name="built" value="1950s to 70s"><span>1950s to 70s</span></label>
+            <label><input type="radio" name="built" value="1980s or later"><span>1980s or later</span></label>
+            <label><input type="radio" name="built" value="Not sure"><span>Not sure</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <label class="q" for="suburb">Which suburb?</label>
+          <select id="suburb" name="suburb" required>
+          <option value="" selected disabled>Choose a suburb</option>
+          <option>Wynnum</option>
+          <option>Wynnum West</option>
+          <option>Manly</option>
+          <option>Manly West</option>
+          <option>Lota</option>
+          <option>Hemmant</option>
+          <option>Tingalpa</option>
+          <option>Wakerley</option>
+          <option>Gumdale</option>
+          <option>Ransome</option>
+          <option>Belmont</option>
+          <option>Chandler</option>
+          <option>Capalaba</option>
+          <option>Birkdale</option>
+          <option>Thorneside</option>
+          <option>Wellington Point</option>
+          <option>Ormiston</option>
+          <option>Cleveland</option>
+          <option>Thornlands</option>
+          <option>Somewhere else</option>
+          </select>
+        </fieldset>
+
+        <fieldset>
+          <label class="q" for="name">Your name</label>
+          <input type="text" id="name" name="name" autocomplete="name" required>
+        </fieldset>
+
+        <fieldset>
+          <label class="q" for="email">Email</label>
+          <input type="email" id="email" name="email" autocomplete="email" required>
+        </fieldset>
+
+        <fieldset>
+          <label class="q" for="mobile">Mobile</label>
+          <input type="tel" id="mobile" name="mobile" autocomplete="tel" required>
+        </fieldset>
+
+        <fieldset>
+          <label class="q" for="address">Street address <span style="font-weight:400;color:var(--muted)">(optional)</span></label>
+          <p class="hint">If you'd like us to check your specific block, add it here.</p>
+          <input type="text" id="address" name="address" autocomplete="street-address">
+        </fieldset>
+
+        <button class="btn" type="submit">Check my block</button>
+        <p class="status" id="formStatus" aria-live="polite"></p>
+      </form>
+
+      <p style="margin-top:40px">Prefer to talk? <a href="tel:+61738233200">07 3823 3200</a>, Monday to Friday, 8am to 4pm.<br>3/73&ndash;75 Steel St, Capalaba QLD 4157.</p>
     </div>
   </section>
 </main>
+
+<script>
+(function(){
+  var f=document.getElementById('enquiry'), s=document.getElementById('formStatus');
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var b=f.querySelector('button'); b.disabled=true; s.className='status'; s.textContent='Sending…';
+    fetch(f.action,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}})
+    .then(function(r){ if(!r.ok) throw new Error(r.status); return r.json(); })
+    .then(function(){ s.className='status ok'; s.textContent='Thanks. We'll look at the block and get back to you within one working day.'; f.reset(); })
+    .catch(function(){ s.className='status err'; s.textContent='That didn't send. Please call 07 3823 3200.'; b.disabled=false; });
+  });
+})();
+</script>
 
 <footer>
   <div class="wrap">
