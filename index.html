@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/site.css?v=12">
+<link rel="stylesheet" href="css/site.css?v=13">
 </head>
 <body>
 <header class="topbar over">
@@ -107,7 +107,7 @@
   (function(){
     var cut=document.getElementById('cut'); if(!cut) return;
     var imgs=cut.querySelectorAll('.cut-img'), tag=cut.querySelector('.cut-tag'), pop=cut.querySelector('.cut-pop'), bar=cut.querySelector('.cut-bar i');
-    var dots=document.querySelectorAll('.stepdots button'), STEP=3300, i=0, timer=null;
+    var dots=document.querySelectorAll('.stepdots button'), STEP=4000, i=0, timer=null;
     function show(n){
       i=n;
       imgs.forEach(function(im,k){ im.classList.toggle('on',k===n); });
@@ -130,6 +130,19 @@
     }
   })();
   </script>
+
+  <section class="vids">
+    <div class="wrap">
+      <p class="eyebrow">Hear from families</p>
+      <h2 class="h2">In their own words.</h2>
+      <p class="placeholder-note">PLACEHOLDER. These three clips are AI-generated stand-ins made for the demo, not Sabre customers. They sit here only to show where the real filmed families go, and they come out before this page is public.</p>
+      <div class="grid-3">
+        <figure class="vid"><video controls preload="none" playsinline poster="https://barebayside.github.io/SabreConstruction/assets/img/testimonial-1.jpg"><source src="https://barebayside.github.io/SabreConstruction/assets/video/testimonial-1.mp4" type="video/mp4"></video><figcaption><span class="ai-chip">AI demo, placeholder</span> Rebuild, Thornlands</figcaption></figure>
+        <figure class="vid"><video controls preload="none" playsinline poster="https://barebayside.github.io/SabreConstruction/assets/img/testimonial-2.jpg"><source src="https://barebayside.github.io/SabreConstruction/assets/video/testimonial-2.mp4" type="video/mp4"></video><figcaption><span class="ai-chip">AI demo, placeholder</span> Knockdown rebuild, Wellington Point</figcaption></figure>
+        <figure class="vid"><video controls preload="none" playsinline poster="https://barebayside.github.io/SabreConstruction/assets/img/testimonial-3.jpg"><source src="https://barebayside.github.io/SabreConstruction/assets/video/testimonial-3.mp4" type="video/mp4"></video><figcaption><span class="ai-chip">AI demo, placeholder</span> Raise and build under, Capalaba</figcaption></figure>
+      </div>
+    </div>
+  </section>
 
   <section>
     <div class="wrap grid-2">
