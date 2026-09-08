@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/site.css?v=15">
+<link rel="stylesheet" href="css/site.css?v=16">
 </head>
 <body>
 <header class="topbar over">
@@ -20,11 +20,10 @@
   <nav class="tb-nav">
       <a href="./" class="active">Home</a>
       <a href="can-we-knock-it-down/">Old houses & the rules</a>
-      <a href="designs/">Designs</a>
-      <a href="gallery/">Gallery</a>
+      <a href="designs/">Your design</a>
       <a href="meet-the-team/">Meet the team</a>
       <a href="testimonials/">Testimonials</a>
-      <a href="blog/">Blog</a>
+      <a href="blog/">Your questions answered</a>
       <a href="contact/">Contact</a>
   </nav>
   <a class="tb-phone" href="tel:+61422831306">0422 831 306</a>
@@ -89,17 +88,19 @@
       <div class="cut cut-full" id="cut">
         <img class="cut-img on" src="assets/img/cut-1-old-house.jpg" alt="An older Bayside family home, cut open so you can see the rooms" data-tag="The house you're in now">
         <img class="cut-img" src="assets/img/cut-2-drawings.jpg" alt="The architect's drawings of the new home over the old house" data-tag="The drawings">
-        <img class="cut-img" src="assets/img/cut-3-new-home.jpg" alt="The new two-storey family home on the same block, a visualisation" data-tag="Your new family home">
+        <img class="cut-img" src="assets/img/cut-3-build.jpg" alt="The new home going up on the same block, a visualisation" data-tag="The build">
+        <img class="cut-img" src="assets/img/cut-4-family.jpg" alt="The family running into their new two-storey home, a visualisation" data-tag="Your new family home">
         <div class="cut-img cut-end"><img src="assets/img/sabre-logo-white.png" alt="Sabre Constructions"><p>Bayside builders since 1990</p></div>
         <span class="cut-tag"></span>
         <div class="cut-pop"><p class="cut-step"></p><p class="cut-num"></p><strong></strong><span></span></div>
         <div class="cut-bar"><i></i></div>
       </div>
-      <div class="stepdots" role="tablist" aria-label="The three steps">
+      <div class="stepdots" role="tablist" aria-label="The four steps">
         <button class="on" data-i="0" data-h="Start with the house you're in." data-t="Nathan walks it with you, room by room. No obligation.">1</button>
         <button data-i="1" data-h="Drawn around your family." data-t="By an architect Sabre works with, for your block and the people on it.">2</button>
-        <button data-i="2" data-h="Welcome to your new family home." data-t="Same street. Same school. Room for everyone.">3</button>
-        <span class="small cut-note">Tap a number to hold it. The old house and the new home are visualisations of one block, not real addresses.</span>
+        <button data-i="2" data-h="Watch it go up." data-t="Nathan on site, on the phone, the whole way through.">3</button>
+        <button data-i="3" data-h="Welcome to your new family home." data-t="Same street. Same school. Room for everyone.">4</button>
+        <span class="small cut-note">Tap a number to hold it. One block, start to finish. A visualisation, not a real address.</span>
       </div>
       <p style="margin-top:28px"><a class="btn" href="#enquiry">Book your walk-through with Nathan</a> <span class="small" style="margin-left:12px">No obligation. He'll ring to set a time that suits the family.</span></p>
     </div>
@@ -108,7 +109,7 @@
   (function(){
     var cut=document.getElementById('cut'); if(!cut) return;
     var imgs=cut.querySelectorAll('.cut-img'), tag=cut.querySelector('.cut-tag'), pop=cut.querySelector('.cut-pop'), bar=cut.querySelector('.cut-bar i');
-    var dots=document.querySelectorAll('.stepdots button'), DUR=[4000,4000,4000,2600], i=0, timer=null;
+    var dots=document.querySelectorAll('.stepdots button'), DUR=[3600,3600,3600,4200,2600], i=0, timer=null;
     function show(n){
       i=n;
       imgs.forEach(function(im,k){ im.classList.toggle('on',k===n); });
@@ -117,7 +118,7 @@
       tag.style.opacity = end?0:1; pop.style.opacity = end?0:'';
       if(!end){
         tag.textContent=imgs[n].dataset.tag;
-        pop.querySelector('.cut-step').textContent='Step '+(n+1)+' of 3';
+        pop.querySelector('.cut-step').textContent='Step '+(n+1)+' of 4';
         pop.querySelector('strong').textContent=dots[n].dataset.h;
         pop.querySelector('span').textContent=dots[n].dataset.t;
         pop.classList.remove('in'); void pop.offsetWidth; pop.classList.add('in');
@@ -331,7 +332,7 @@
     <div>
       <p class="foot-h">Where we build</p>
       <p><a href="wynnum/">Wynnum</a> &middot; <a href="manly/">Manly</a> &middot; Lota &middot; Wakerley &middot; Capalaba &middot; Birkdale &middot; Wellington Point &middot; Cleveland and across the Bayside and Redlands</p>
-      <p><a href="can-we-knock-it-down/">Old houses &amp; the rules</a> &middot; <a href="blog/">Blog</a> &middot; <a href="https://www.facebook.com/sabreconstructions">Facebook</a></p>
+      <p><a href="can-we-knock-it-down/">Old houses &amp; the rules</a> &middot; <a href="blog/">Your questions answered</a> &middot; <a href="https://www.facebook.com/sabreconstructions">Facebook</a></p>
     </div>
   </div>
 </footer>
