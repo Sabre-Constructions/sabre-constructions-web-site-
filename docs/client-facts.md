@@ -18,7 +18,7 @@
 | **Monday to Friday, 8am–4pm** | their contact page |
 | Email **admin@sabreconstructions.com.au** | their contact page |
 | Facebook: facebook.com/sabreconstructions | their site footer |
-| Mobile **0422 831 306** — the number on their public signage | fence mesh banner proof, Wild Web Print & Sign job #8574, 27 Aug 2026 (`Sabre Constructions/docs/reference/brand/`) |
+| Mobile **0422 831 306** — the number on their public signage. **The number the website uses everywhere (Edward, 2026-09-08): it's Nathan's.** The 07 office line stays in the facts but not on the pages | fence mesh banner proof, Wild Web Print & Sign job #8574, 27 Aug 2026 (`Sabre Constructions/docs/reference/brand/`) |
 | **Master Builders Queensland member, No. 00352** | same banner proof |
 | Instagram account exists (icon on the banner) — handle not yet known | same banner proof |
 | Their own signage headline is **"Knock Down Rebuilds"** — Sabre's words, not ours | same banner proof |

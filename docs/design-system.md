@@ -111,6 +111,6 @@ done. The header collapses to logo, phone number and a wrapped nav.
 
 The phone number in the header is a tap-to-call link and must stay one:
 
-    <a href="tel:+61738233200">07 3823 3200</a>
+    <a href="tel:+61422831306">0422 831 306</a>
 
 Display the friendly local number, dial the full international one.
