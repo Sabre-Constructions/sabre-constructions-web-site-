@@ -9,7 +9,10 @@
 <!-- PREVIEW ONLY. Strip this line at promotion or Sabre vanishes from Google. -->
 <meta name="robots" content="noindex, nofollow">
 
-<link rel="stylesheet" href="css/site.css?v=6">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css?v=7">
 </head>
 <body>
 <header class="topbar over">
@@ -28,25 +31,49 @@
 
 <main>
 
-  <header class="hero">
+  <header class="hero" id="hero">
     <video class="v-wide" autoplay muted loop playsinline poster="assets/img/drone-clarence-wide-poster.jpg"><source src="assets/video/drone-clarence-wide.mp4" type="video/mp4"></video>
     <video class="v-tall" autoplay muted loop playsinline poster="assets/img/drone-clarence-portrait-poster.jpg"><source src="assets/video/drone-clarence-portrait.mp4" type="video/mp4"></video>
+    <p class="hero-words">Build your new family home.<br>On the street you already love.</p>
     <div class="hero-inner wrap">
-      <p class="eyebrow">Builders on the Bayside since 1990</p>
-      <h1 class="h1">You picked this street.</h1>
-      <p class="lede">Don't let the house decide you have to leave it. New homes on the blocks Bayside families already love, from Wynnum to Cleveland.</p>
+      <p class="eyebrow">Sabre Constructions &middot; Bayside builders since 1990</p>
+      <h1 class="h1">You picked this street. Don't let the house decide you have to leave it.</h1>
       <p><a class="btn" href="contact/">Check my block, free</a></p>
       <p class="small">Two questions. No address needed. No obligation.</p>
     </div>
     <p class="hero-cap">Clarence, a Sabre build. The camera move is a visualisation.</p>
   </header>
+  <script>
+  (function(){
+    var hero=document.getElementById('hero'); if(!hero) return;
+    var vids=hero.querySelectorAll('video');
+    vids.forEach(function(v){
+      v.addEventListener('timeupdate',function(){
+        if(!v.duration) return;
+        hero.classList.toggle('ended', v.currentTime > v.duration - 2.6);
+      });
+    });
+  })();
+  </script>
 
-  <section class="band-dark" style="padding:56px 0">
-    <div class="wrap creds">
-      <div><p class="v">1990</p><p class="k">Building on the Bayside since</p></div>
-      <div><p class="v">4.5</p><p class="k">Google rating, from 12 reviews</p></div>
-      <div><p class="v">328475</p><p class="k">QBCC Builders Licence</p></div>
-      <div><p class="v">00352</p><p class="k">Master Builders Queensland member</p></div>
+  <section>
+    <div class="wrap">
+      <p class="eyebrow">What Sabre's clients say</p>
+      <div class="rating">
+        <p class="v">4.5</p>
+        <div><p class="k">out of 5, from 12 Google reviews</p><p class="small">Every quote below is from Sabre's public Google listing, word for word. One of the twelve is a one-star. It's still there. <a href="testimonials/">Read all twelve &rarr;</a></p></div>
+      </div>
+      <div class="grid-3" style="margin-top:0">
+        <blockquote class="quote"><p>&ldquo;Any house construction is fraught with dangers, stress and hidden costs. None of this happened.&rdquo;</p><cite>Roselia Finlay &middot; January 2022</cite></blockquote>
+        <blockquote class="quote"><p>&ldquo;The first thing Stewart pointed out was the plans could be changed to build it cheaper, this helped us enormously.&rdquo;</p><cite>Lesley W &middot; April 2020</cite></blockquote>
+        <blockquote class="quote"><p>&ldquo;This is a family company that made us feel like part of their family team.&rdquo;</p><cite>Matthew Campbell &middot; November 2020</cite></blockquote>
+      </div>
+      <div class="creds" style="margin-top:48px">
+        <div><p class="v">1990</p><p class="k">Building on the Bayside since</p></div>
+        <div><p class="v">36 years</p><p class="k">Family owned, family run</p></div>
+        <div><p class="v">328475</p><p class="k">QBCC Builders Licence</p></div>
+        <div><p class="v">00352</p><p class="k">Master Builders Queensland</p></div>
+      </div>
     </div>
   </section>
 
@@ -61,14 +88,15 @@
     </div>
   </section>
 
-  <section class="band-dark">
+  <section>
     <div class="wrap">
-      <p class="eyebrow">Why families stay</p>
-      <h2 class="h2">Same street. Same school.<br>A whole new house.</h2>
-      <div class="grid-3">
-        <div class="card"><h3 class="h3">Same street. Same school.</h3><p>The kids keep their friends and their walk to school. You keep the water at the end of the road. Only the house changes.</p></div>
-        <div class="card"><h3 class="h3">A real answer before you spend anything.</h3><p>Most owners have no idea whether Brisbane's character rules even let them rebuild. We check that first, for free.</p></div>
-        <div class="card"><h3 class="h3">The people who quote it, build it.</h3><p>Stewart walks your block. Nathan and Frank are on site. There's no sales team in between.</p></div>
+      <p class="eyebrow">The four things families ask first</p>
+      <h2 class="h2">Fair questions. Straight answers.</h2>
+      <div class="grid-4">
+        <div class="card"><p class="num">01</p><h3 class="h3">Are we even allowed?</h3><p>If your house is from before 1947, Brisbane's character rules may apply. We check the council map with you first, for free. <a href="can-we-knock-it-down/">How that works &rarr;</a></p></div>
+        <div class="card"><p class="num">02</p><h3 class="h3">Where do the kids live?</h3><p>Most families rent nearby to stay in the school catchment. It's the biggest cost people forget, so it's on the table at the first conversation.</p></div>
+        <div class="card"><p class="num">03</p><h3 class="h3">Will the number move?</h3><p>Roselia's review names the fear and says it didn't happen. Changes get priced before they're made, not after.</p></div>
+        <div class="card"><p class="num">04</p><h3 class="h3">Who actually turns up?</h3><p>Stewart walks your block. Frank runs the site. Nathan is on the tools. Three of them are named in Google reviews for being there.</p></div>
       </div>
     </div>
   </section>
@@ -82,28 +110,16 @@
         <div class="steps" style="grid-template-columns:1fr 1fr">
           <div><p class="n">01</p><h3 class="h3">Check the block</h3><p>Two questions about the house and we'll tell you whether a rebuild is realistic on your block.</p></div>
           <div><p class="n">02</p><h3 class="h3">Walk it with Stewart</h3><p>Slope, width, access, and what the land will take. He's been reading Bayside blocks since 1990.</p></div>
-          <div><p class="n">03</p><h3 class="h3">Design it around your family</h3><p>Start from one of six Sabre designs or bring your architect's drawings.</p></div>
+          <div><p class="n">03</p><h3 class="h3">Design it around your family</h3><p>Start from one of <a href="designs/">six Sabre designs</a> or bring your architect's drawings.</p></div>
           <div><p class="n">04</p><h3 class="h3">Build it</h3><p>Frank runs the site. Nathan is on the tools. You always know what's happening this week.</p></div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="band-dark">
-    <div class="wrap">
-      <p class="eyebrow">In their words</p>
-      <h2 class="h2">What a build with Sabre is actually like.</h2>
-      <div class="grid-3">
-        <blockquote class="quote"><p>&ldquo;Any house construction is fraught with dangers, stress and hidden costs. None of this happened.&rdquo;</p><cite>Roselia Finlay &middot; Google review, January 2022</cite></blockquote>
-        <blockquote class="quote"><p>&ldquo;The first thing Stewart pointed out was the plans could be changed to build it cheaper, this helped us enormously.&rdquo;</p><cite>Lesley W &middot; Google review, April 2020</cite></blockquote>
-        <blockquote class="quote"><p>&ldquo;Nathan and the gang were excellent during the build. Always around to help or offer suggestions.&rdquo;</p><cite>Jason Turner &middot; Google review, June 2025</cite></blockquote>
-      </div>
-      <p class="small" style="margin-top:20px">Every quote is from Sabre's public Google listing, word for word. <a href="testimonials/">All twelve, including the one-star we haven't hidden &rarr;</a></p>
-    </div>
-  </section>
-
-  <section class="section-tight" style="padding-top:48px">
+  <section class="section-tight" style="padding-top:56px">
     <div class="wrap-wide">
+      <p class="eyebrow">Real houses, on real Bayside streets</p>
       <div class="strip" style="grid-template-columns:repeat(4,1fr)">
         <a href="gallery/"><img src="assets/img/proj2x-clarence.jpg" alt="Clarence, a Sabre build"></a>
         <a href="gallery/"><img src="assets/img/proj2x-killarney79.jpg" alt="Killarney 79, a Sabre build"></a>
@@ -114,12 +130,12 @@
     </div>
   </section>
 
-  <section class="band-dark">
+  <section>
     <div class="wrap grid-2">
       <div>
         <p class="eyebrow">Who you'll be dealing with</p>
         <h2 class="h2">A family business, run by a family.</h2>
-        <p class="lede">Stewart picked up the tools at seventeen and started Sabre with Cathy in 1990. Their son Nathan is the second generation on the tools. Frank has run their sites for seventeen years.</p>
+        <p class="lede">Stewart picked up the tools at seventeen and started Sabre with Cathy in 1990. Their son Nathan is the second generation on the tools. Frank has run their sites for seventeen years. They raised three kids while building the company, so they know what a long build does to a family's year.</p>
         <p><a href="meet-the-team/">Meet the six of them &rarr;</a></p>
       </div>
       <div class="team-row">
@@ -131,12 +147,12 @@
   <section>
     <div class="wrap">
       <p class="eyebrow">Before you ring</p>
-      <h2 class="h2">Fair questions.</h2>
+      <h2 class="h2">A few more questions people ask.</h2>
       <div class="faq">
-        <details><summary>Is my house allowed to come down?</summary><p>If it was built after 1946, Brisbane's character rules almost certainly don't stop you. If it's older and your street is in the character overlay, council decides on an application. <a href="can-we-knock-it-down/">Here's how that works</a>, and we check the map with you first.</p></details>
-        <details><summary>Where do we live while you build?</summary><p>Most families rent nearby to stay in the school catchment. It's the biggest cost people forget, so it's on the table at the first conversation, not after you've signed.</p></details>
         <details><summary>Do we need our own plans?</summary><p>No. Start from one of <a href="designs/">six Sabre designs</a> and change what you like, or bring your own architect's drawings. Sabre builds both ways.</p></details>
         <details><summary>Where do you build?</summary><p>Capalaba is home. <a href="wynnum/">Wynnum</a>, <a href="manly/">Manly</a>, Lota, Wakerley, Birkdale, Wellington Point, Cleveland and across the Bayside and Redlands.</p></details>
+        <details><summary>Do you do renovations and raises, or only new homes?</summary><p>Both. New homes, knockdown rebuilds, raises, renovations and extensions. Reviews on the testimonials page cover all of them.</p></details>
+        <details><summary>What does the free block check actually involve?</summary><p>Two questions on the contact page: which best describes you, and roughly when the house was built. Add your suburb and how to reach you. We check the council overlay map and tell you what we find.</p></details>
       </div>
     </div>
   </section>
