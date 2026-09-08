@@ -18,6 +18,15 @@
 | **Monday to Friday, 8am–4pm** | their contact page |
 | Email **admin@sabreconstructions.com.au** | their contact page |
 | Facebook: facebook.com/sabreconstructions | their site footer |
+| Mobile **0422 831 306** — the number on their public signage | fence mesh banner proof, Wild Web Print & Sign job #8574, 27 Aug 2026 (`Sabre Constructions/docs/reference/brand/`) |
+| **Master Builders Queensland member, No. 00352** | same banner proof |
+| Instagram account exists (icon on the banner) — handle not yet known | same banner proof |
+| Their own signage headline is **"Knock Down Rebuilds"** — Sabre's words, not ours | same banner proof |
+
+⚠️ **Two different QBCC licence numbers exist.** Their contact page says **328475**;
+the 27 Aug 2026 banner proof says **15486557**. One may be the company licence and
+the other the nominee's. Do not put either on a page until Nathan confirms which is
+which. (Flagged 2026-09-08.)
 
 ⚠️ Their old site said "25+ years". They started in 1990, so that was **under**
 selling it. Use 1990 or 36 years. A real number beats a vague one.
