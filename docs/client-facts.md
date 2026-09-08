@@ -40,7 +40,12 @@ selling it. Use 1990 or 36 years. A real number beats a vague one.
 | **Nathan Brain** | Carpenter. The middle Brain child |
 | **Frank Doorly** | Site supervisor. 17 years at Sabre |
 | **Celene Van Bladeren** | Accounts and operations. Client liaison, suppliers, scheduling |
-| **Jacob Campbell** | Estimator. Prices changes |
+| **Jacob Campbell** | Estimator. Prices changes. "The youngest team member" (their page) |
+
+Also from their Meet The Team page (read 2026-09-08): Stewart has "more than 30 years' experience as a
+carpenter and builder" and "later coached athletes to the 2012 and 2016 Olympics"; Nathan "recently
+completed his carpentry apprenticeship"; Frank has "Seventeen years of experience at Sabre". The six
+team photos on the new site are their own (`/images/team/pic-*.jpg` on the old site, 200 px).
 
 Stewart and Cathy both competed at the Olympics in judo and founded Ohori Judo
 Club together. Stewart went to Seoul 1988 and took bronze at the 1986
@@ -54,9 +59,20 @@ Andy". Andy is not on the team. Do not repeat that name.
 ## Projects and designs
 
 **Built:** Brighton · Clarence · Alexandra · Killarney 78 · Killarney 79 ·
-Clapton · Marcoola
+Clapton · Marcoola (their gallery page, 2018 photos; upscaled non-generatively for the new site)
 
-**Designs:** Alexander · Belmont · Chelsea · Waderbird
+**Designs (their designs page, read 2026-09-08 — six, not four):**
+
+| Design | Stated on their page |
+|---|---|
+| Killarney | 4 bed · 3.5 bath · 2 car. "Designed to take advantage of narrow blocks" |
+| Waderbird | 4 bed · 2 bath · 3 car · living 215.36 + garage 60.23 + alfresco 40.48 + porch 4.91 = **320.97 m² total** (sums correctly) |
+| Alexander | 4 bed · 3.5 bath · 2 car · highset. ⚠️ Its area figures on their page do not add up (72.57 living vs 280.93 total) — **do not quote Alexander's areas** until Sabre confirms |
+| Belmont | 4 bed · 2 bath · 2 car |
+| Chelsea | 4 bed · 3 bath · 2 car |
+| Clarence | 4 bed · 4 bath · 2 car |
+
+No prices anywhere on their page. Never add one.
 
 ## Google reviews — real, and safe to quote
 
