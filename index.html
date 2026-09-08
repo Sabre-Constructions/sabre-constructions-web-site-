@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/site.css?v=7">
+<link rel="stylesheet" href="css/site.css?v=8">
 </head>
 <body>
 <header class="topbar over">
@@ -38,8 +38,8 @@
     <div class="hero-inner wrap">
       <p class="eyebrow">Sabre Constructions &middot; Bayside builders since 1990</p>
       <h1 class="h1">You picked this street. Don't let the house decide you have to leave it.</h1>
-      <p><a class="btn" href="contact/">Check my block, free</a></p>
-      <p class="small">Two questions. No address needed. No obligation.</p>
+      <p><a class="btn" href="contact/">Book your walk-through with Nathan</a></p>
+      <p class="small">No obligation. Room by room, with the builder.</p>
     </div>
     <p class="hero-cap">Clarence, a Sabre build. The camera move is a visualisation.</p>
   </header>
@@ -78,44 +78,51 @@
   </section>
 
   <section>
-    <div class="wrap alt">
-      <img src="assets/img/proj2x-clarence.jpg" alt="Clarence, a two-storey home built by Sabre Constructions">
+    <div class="wrap grid-2 story" style="align-items:start;gap:64px">
       <div>
-        <p class="eyebrow">The loop most families are stuck in</p>
-        <h2 class="h2">It's not the house. It's the year.</h2>
-        <p class="lede">The house stops working. You price a renovation and the number frightens you. So you look at moving, and nothing replaces the street. Round again, for eighteen months. There's a third answer: stay on the block and build the house that fits.</p>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="wrap">
-      <p class="eyebrow">The four things families ask first</p>
-      <h2 class="h2">Fair questions. Straight answers.</h2>
-      <div class="grid-4">
-        <div class="card"><p class="num">01</p><h3 class="h3">Are we even allowed?</h3><p>If your house is from before 1947, Brisbane's character rules may apply. We check the council map with you first, for free. <a href="can-we-knock-it-down/">How that works &rarr;</a></p></div>
-        <div class="card"><p class="num">02</p><h3 class="h3">Where do the kids live?</h3><p>Most families rent nearby to stay in the school catchment. It's the biggest cost people forget, so it's on the table at the first conversation.</p></div>
-        <div class="card"><p class="num">03</p><h3 class="h3">Will the number move?</h3><p>Roselia's review names the fear and says it didn't happen. Changes get priced before they're made, not after.</p></div>
-        <div class="card"><p class="num">04</p><h3 class="h3">Who actually turns up?</h3><p>Stewart walks your block. Frank runs the site. Nathan is on the tools. Three of them are named in Google reviews for being there.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="wrap alt flip">
-      <img src="assets/img/proj2x-killarney79.jpg" alt="Killarney 79, a home built by Sabre Constructions">
-      <div>
-        <p class="eyebrow">How it works</p>
-        <h2 class="h2">Four steps. The first is free.</h2>
-        <div class="steps" style="grid-template-columns:1fr 1fr">
-          <div><p class="n">01</p><h3 class="h3">Check the block</h3><p>Two questions about the house and we'll tell you whether a rebuild is realistic on your block.</p></div>
-          <div><p class="n">02</p><h3 class="h3">Walk it with Stewart</h3><p>Slope, width, access, and what the land will take. He's been reading Bayside blocks since 1990.</p></div>
-          <div><p class="n">03</p><h3 class="h3">Design it around your family</h3><p>Start from one of <a href="designs/">six Sabre designs</a> or bring your architect's drawings.</p></div>
-          <div><p class="n">04</p><h3 class="h3">Build it</h3><p>Frank runs the site. Nathan is on the tools. You always know what's happening this week.</p></div>
+        <div class="cut" id="cut">
+          <img class="cut-img on" src="assets/img/cut-1-old-house.jpg" alt="An older Bayside house, the kind most families start in" data-tag="The house you're in now">
+          <img class="cut-img" src="assets/img/cut-2-drawings.jpg" alt="The architect's drawings of the new home" data-tag="The drawings">
+          <img class="cut-img" src="assets/img/cut-3-new-home.jpg" alt="Clarence, a home built by Sabre Constructions" data-tag="Your new family home">
+          <span class="cut-tag"></span>
+          <div class="cut-pop"><strong></strong><span></span></div>
         </div>
+        <div class="stepdots" role="tablist" aria-label="The three steps">
+          <button class="on" data-i="0" data-h="Nathan walks your house with you." data-t="Room by room. What's stopped working, and what your family needs from the next one.">1</button>
+          <button data-i="1" data-h="Your design, drawn around your family." data-t="An architect Sabre works with draws the new home for your family and your block.">2</button>
+          <button data-i="2" data-h="Then Sabre builds it." data-t="The builder who walked your old house is the one on the phone, right through to the keys.">3</button>
+        </div>
+        <p class="small cut-note">Tap the numbers. The new home is Clarence, a real Sabre build.</p>
+      </div>
+      <div class="prose-copy">
+        <h2 class="h2">Same street. Same school.<br>A whole new house.</h2>
+        <p>Saturday morning. The kids are on the front lawn, the neighbours wave on the way past, and you're standing at the kitchen window thinking the same thing you've thought for two years. We love it here. The house just doesn't fit us anymore.</p>
+        <p>That's where most families start with Sabre. Nathan comes out and walks through the house with you, the actual house, room by room. Where the kids sleep. Where dinner happens. What's stopped working, and what your family needs from the next one.</p>
+        <p>From there an architect Sabre works with draws your new home around your family and your block. Then Sabre builds it. Nathan takes on a handful of homes at a time, so the builder who walked your old house is the one who answers the phone right through to the day he hands you the keys.</p>
+        <p>Thirty-six years on the Bayside, and the reputation comes down to one thing. They stay with you.</p>
+        <p style="margin-top:28px"><a class="btn" href="contact/">Book your walk-through with Nathan</a></p>
+        <p class="small">No obligation. He'll ring to set a time that suits the family.</p>
       </div>
     </div>
   </section>
+  <script>
+  (function(){
+    var cut=document.getElementById('cut'); if(!cut) return;
+    var imgs=cut.querySelectorAll('.cut-img'), tag=cut.querySelector('.cut-tag'), pop=cut.querySelector('.cut-pop');
+    var dots=document.querySelectorAll('.stepdots button');
+    function show(i){
+      imgs.forEach(function(im,k){ im.classList.toggle('on',k===i); });
+      dots.forEach(function(d,k){ d.classList.toggle('on',k===i); });
+      tag.textContent=imgs[i].dataset.tag;
+      pop.querySelector('strong').textContent=dots[i].dataset.h;
+      pop.querySelector('span').textContent=dots[i].dataset.t;
+    }
+    dots.forEach(function(d){ d.addEventListener('click',function(){ show(+d.dataset.i); }); });
+    show(0);
+    var i=0, timer=setInterval(function(){ i=(i+1)%3; show(i); },5000);
+    dots.forEach(function(d){ d.addEventListener('click',function(){ clearInterval(timer); }); });
+  })();
+  </script>
 
   <section class="section-tight" style="padding-top:56px">
     <div class="wrap-wide">
@@ -152,18 +159,17 @@
         <details><summary>Do we need our own plans?</summary><p>No. Start from one of <a href="designs/">six Sabre designs</a> and change what you like, or bring your own architect's drawings. Sabre builds both ways.</p></details>
         <details><summary>Where do you build?</summary><p>Capalaba is home. <a href="wynnum/">Wynnum</a>, <a href="manly/">Manly</a>, Lota, Wakerley, Birkdale, Wellington Point, Cleveland and across the Bayside and Redlands.</p></details>
         <details><summary>Do you do renovations and raises, or only new homes?</summary><p>Both. New homes, knockdown rebuilds, raises, renovations and extensions. Reviews on the testimonials page cover all of them.</p></details>
-        <details><summary>What does the free block check actually involve?</summary><p>Two questions on the contact page: which best describes you, and roughly when the house was built. Add your suburb and how to reach you. We check the council overlay map and tell you what we find.</p></details>
       </div>
     </div>
   </section>
 
   <section class="band-red">
     <div class="wrap">
-      <p class="eyebrow">Free block check</p>
-      <h2 class="h2">Can we knock it down?</h2>
-      <p class="lede">Two questions about your house. We'll tell you whether a rebuild is realistic on your block before you spend a dollar. No address unless you want your own street checked.</p>
-      <p><a class="btn" href="contact/">Check my block, free</a> <a class="btn btn-ghost" href="tel:+61738233200">Call 07 3823 3200</a></p>
-      <p class="small">Or ring Monday to Friday, 8am to 4pm. Capalaba QLD.</p>
+      <p class="eyebrow">Where most families start</p>
+      <h2 class="h2">A walk through your house with Nathan.</h2>
+      <p class="lede">Room by room, with the builder who'd build the next one. No obligation, and no need to know what you want yet. He'll ring to set a time that suits the family.</p>
+      <p><a class="btn" href="contact/">Book your walk-through with Nathan</a> <a class="btn btn-ghost" href="tel:+61738233200">Call 07 3823 3200</a></p>
+      <p class="small">Already thinking about a rebuild? The free block check is on the same page.</p>
     </div>
   </section>
 </main>
