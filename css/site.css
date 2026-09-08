@@ -332,3 +332,30 @@ footer a{color:#fff}
   .vids-grid{gap:24px}
   .stepv img{aspect-ratio:4/3}.stepv figcaption{left:16px;right:16px;bottom:16px;max-width:none}
 }
+
+/* v18: the Your design journey — zigzag rows joined by a line */
+.journey .jrow{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+.journey .jrow.flip .jimg{order:2}
+.journey .jimg{margin:0}
+.journey .jimg img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--r)}
+.journey .jn{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--red);margin:0 0 10px}
+.journey .jtxt .h2{font-size:clamp(24px,2.6vw,34px)}
+.journey .jtxt p{font-size:17px}
+.journey .jlink{width:2px;height:64px;margin:12px auto;background:linear-gradient(180deg,var(--line),var(--muted));border-radius:2px}
+.journey .jbig{margin:0;position:relative;border-radius:var(--r);overflow:hidden;background:var(--char)}
+.journey .jbig img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+.journey .jbig::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,10,0) 50%,rgba(10,10,10,.72) 100%);pointer-events:none}
+.journey .jbig figcaption{position:absolute;left:32px;right:32px;bottom:32px;z-index:2;color:#fff;max-width:62%}
+.journey .jbig .n{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:rgba(255,255,255,.7);margin-bottom:8px}
+.journey .jbig strong{display:block;font-size:clamp(26px,3.2vw,44px);font-weight:600;letter-spacing:-.02em;line-height:1.1;margin-bottom:8px;text-shadow:0 2px 12px rgba(0,0,0,.35)}
+.journey .jbig span:last-child{font-size:clamp(16px,1.4vw,20px);color:#EDEDF0;line-height:1.5;text-shadow:0 1px 8px rgba(0,0,0,.35)}
+.jstrip{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin:18px 0 8px}
+.jthumb{display:block;text-decoration:none;color:var(--muted);font-size:11px;text-align:center}
+.jthumb img{width:100%;aspect-ratio:5/3;object-fit:cover;border-radius:6px;background:#fff;margin-bottom:4px}
+@media (max-width:860px){
+  .journey .jrow,.journey .jrow.flip{grid-template-columns:1fr;gap:20px}
+  .journey .jrow.flip .jimg{order:0}
+  .journey .jlink{height:40px}
+  .journey .jbig img{aspect-ratio:4/3}.journey .jbig figcaption{left:16px;right:16px;bottom:16px;max-width:none}
+  .jstrip{grid-template-columns:repeat(3,1fr)}
+}
