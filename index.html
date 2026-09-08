@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/site.css?v=11">
+<link rel="stylesheet" href="css/site.css?v=12">
 </head>
 <body>
 <header class="topbar over">
@@ -80,7 +80,7 @@
 
   <section style="padding-bottom:28px">
     <div class="wrap story">
-      <h2 class="h2">Same street. Same school.<br>A whole new house.</h2>
+      <h2 class="story-title"><img class="nathan-ic" src="assets/img/team-nathan.jpg" alt="Nathan Brain, builder">Same street. Same school.<br>A whole new house.</h2>
     </div>
   </section>
 
@@ -91,7 +91,7 @@
         <img class="cut-img" src="assets/img/cut-2-drawings.jpg" alt="The architect's drawings of the new home over the old house" data-tag="The drawings">
         <img class="cut-img" src="assets/img/cut-3-new-home.jpg" alt="Clarence, a home built by Sabre Constructions" data-tag="Your new family home">
         <span class="cut-tag"></span>
-        <div class="cut-pop"><p class="cut-step"></p><strong></strong><span></span></div>
+        <div class="cut-pop"><p class="cut-step"></p><p class="cut-num"></p><strong></strong><span></span></div>
         <div class="cut-bar"><i></i></div>
       </div>
       <div class="stepdots" role="tablist" aria-label="The three steps">
@@ -107,13 +107,13 @@
   (function(){
     var cut=document.getElementById('cut'); if(!cut) return;
     var imgs=cut.querySelectorAll('.cut-img'), tag=cut.querySelector('.cut-tag'), pop=cut.querySelector('.cut-pop'), bar=cut.querySelector('.cut-bar i');
-    var dots=document.querySelectorAll('.stepdots button'), STEP=3200, i=0, timer=null;
+    var dots=document.querySelectorAll('.stepdots button'), STEP=3300, i=0, timer=null;
     function show(n){
       i=n;
       imgs.forEach(function(im,k){ im.classList.toggle('on',k===n); });
       dots.forEach(function(d,k){ d.classList.toggle('on',k===n); });
       tag.textContent=imgs[n].dataset.tag;
-      pop.querySelector('.cut-step').textContent='Step '+(n+1)+' of 3';
+      pop.querySelector('.cut-step').textContent='Step '+(n+1)+' of 3'; pop.querySelector('.cut-num').textContent='0'+(n+1);
       pop.querySelector('strong').textContent=dots[n].dataset.h;
       pop.querySelector('span').textContent=dots[n].dataset.t;
       pop.classList.remove('in'); void pop.offsetWidth; pop.classList.add('in');
@@ -178,7 +178,10 @@
         <input type="hidden" name="_subject" value="Website enquiry — sabreconstructions.com.au">
         <input type="text" name="_gotcha" class="gotcha" tabindex="-1" autocomplete="off">
 
-        <fieldset>
+        <div class="wiz" id="wiz">
+  <p class="wiz-prog"><span id="wizN">1</span> of 3</p>
+  <div class="wiz-step on" data-step="1">
+<fieldset>
           <legend>Which best describes you?</legend>
           <div class="opts">
             <label><input type="radio" name="describes" value="I own a house I'd like to replace" required><span>I own a house I'd like to replace</span></label>
@@ -188,7 +191,10 @@
           </div>
         </fieldset>
 
-        <fieldset hidden data-step="2">
+        
+  </div>
+  <div class="wiz-step" data-step="2">
+<fieldset>
           <legend>Roughly when was the house built?</legend>
           <p class="hint">Houses from before 1947 can fall under Brisbane's character rules. This is the first thing we check.</p>
           <div class="opts">
@@ -199,7 +205,11 @@
           </div>
         </fieldset>
 
-        <fieldset hidden data-step="3">
+        
+    <p class="wiz-back"><a href="#" data-back>&larr; Back</a></p>
+  </div>
+  <div class="wiz-step" data-step="3">
+<fieldset>
           <label class="q" for="suburb">Which suburb?</label>
           <select id="suburb" name="suburb" required>
           <option value="" selected disabled>Choose a suburb</option>
@@ -226,28 +236,34 @@
           </select>
         </fieldset>
 
-        <fieldset hidden data-step="4">
+        
+<fieldset>
           <label class="q" for="name">Your name</label>
           <input type="text" id="name" name="name" autocomplete="name" required>
         </fieldset>
 
-        <fieldset hidden data-step="5">
+        
+<fieldset>
           <label class="q" for="email">Email</label>
           <input type="email" id="email" name="email" autocomplete="email" required>
         </fieldset>
 
-        <fieldset hidden data-step="6">
+        
+<fieldset>
           <label class="q" for="mobile">Mobile</label>
           <input type="tel" id="mobile" name="mobile" autocomplete="tel" required>
         </fieldset>
 
-        <fieldset hidden data-step="7">
+        
+<fieldset>
           <label class="q" for="address">Street address <span style="font-weight:400;color:var(--muted)">(optional)</span></label>
           <p class="hint">If you'd like us to check your specific block, add it here.</p>
           <input type="text" id="address" name="address" autocomplete="street-address">
         </fieldset>
-
-        <p hidden data-step="submit"><button class="btn" type="submit">Book my walk-through</button></p>
+    <p><button class="btn" type="submit">Book my walk-through</button></p>
+    <p class="wiz-back"><a href="#" data-back>&larr; Back</a></p>
+  </div>
+</div>
         <p class="status" id="formStatus" aria-live="polite"></p>
       </form>
         <p class="small" style="margin-top:16px">Prefer to talk? <a href="tel:+61738233200">07 3823 3200</a>, Monday to Friday, 8am to 4pm.</p>
@@ -257,17 +273,17 @@
 <script>
 (function(){
   var f=document.getElementById('enquiry'), s=document.getElementById('formStatus');
-  // One question at a time. Answer the first and the next appears; answer the second and the rest appears.
-  var steps=f.querySelectorAll('[data-step]');
-  function reveal(from){
-    steps.forEach(function(el){
-      var n=el.dataset.step;
-      var show = (from>=2) ? true : (n!=='submit' && +n===from+1);
-      if(show && el.hidden){ el.hidden=false; el.classList.add('appear'); }
-    });
+  // Three-step slide: one question in the same space at a time. Answer, and the next slides in.
+  var wiz=document.getElementById('wiz'), steps=wiz.querySelectorAll('.wiz-step'), n=document.getElementById('wizN'), cur=0;
+  function go(k){
+    if(k<0||k>=steps.length) return;
+    steps.forEach(function(st,i){ st.classList.toggle('on',i===k); st.classList.toggle('prev',i<k); });
+    cur=k; n.textContent=k+1;
+    var first=steps[k].querySelector('input:not([type=radio]):not([type=hidden]),select'); if(first && k===2) setTimeout(function(){ first.focus(); },450);
   }
-  f.querySelectorAll('input[name=describes]').forEach(function(r){ r.addEventListener('change',function(){ reveal(1); }); });
-  f.querySelectorAll('input[name=built]').forEach(function(r){ r.addEventListener('change',function(){ reveal(2); }); });
+  f.querySelectorAll('input[name=describes]').forEach(function(r){ r.addEventListener('change',function(){ setTimeout(function(){ go(1); },260); }); });
+  f.querySelectorAll('input[name=built]').forEach(function(r){ r.addEventListener('change',function(){ setTimeout(function(){ go(2); },260); }); });
+  f.querySelectorAll('[data-back]').forEach(function(a){ a.addEventListener('click',function(e){ e.preventDefault(); go(cur-1); }); });
   f.addEventListener('submit',function(e){
     e.preventDefault();
     var b=f.querySelector('button'); b.disabled=true; s.className='status'; s.textContent='Sending…';

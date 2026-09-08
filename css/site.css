@@ -260,3 +260,31 @@ footer a{color:#fff}
 .gstars{display:inline-flex;gap:2px}
 .gstars i{width:18px;height:18px;display:inline-block;background:#FBBC04;clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)}
 .gstars i.h{background:linear-gradient(90deg,#FBBC04 50%,#E6E4DF 50%)}
+
+/* v12: clean white, hero-style story title with Nathan, big dark step panel, slide-across form */
+:root{--paper:#FFFFFF;--line:#E9E8E6}
+.topbar{background:rgba(255,255,255,.94)}
+@media (max-width:860px){.topbar.over{background:rgba(255,255,255,.94)}}
+.story{text-align:center}
+.story-title{font-weight:600;letter-spacing:-.02em;line-height:1.05;color:var(--ink);font-size:clamp(38px,5.6vw,72px);margin:0 auto;max-width:18ch;display:flex;flex-direction:column;align-items:center;gap:18px}
+.nathan-ic{width:72px;height:72px;border-radius:50%;object-fit:cover;border:3px solid #fff;box-shadow:0 4px 18px rgba(0,0,0,.15)}
+.cut-img{transition:opacity .5s ease}
+.cut-full .cut-pop{left:24px;top:24px;bottom:24px;right:auto;width:38%;max-width:none;background:rgba(34,35,42,.94);color:#fff;border-radius:var(--r);padding:28px;display:flex;flex-direction:column;justify-content:flex-end;box-shadow:none;font-size:17px;line-height:1.5}
+.cut-full .cut-pop .cut-step{color:#9A9BA3;margin:0 0 auto}
+.cut-full .cut-pop .cut-num{font-size:clamp(48px,6vw,84px);font-weight:600;letter-spacing:-.03em;line-height:1;color:var(--red);margin:0 0 12px}
+.cut-full .cut-pop strong{font-size:clamp(20px,2vw,26px);line-height:1.2;margin-bottom:10px}
+.cut-full .cut-pop span{color:#D6D6DC}
+.cut-full .cut-tag{left:auto;right:16px}
+.wiz{position:relative;overflow:hidden}
+.wiz-prog{font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:var(--muted);margin:0 0 14px}
+.wiz-step{position:absolute;top:0;left:0;width:100%;transform:translateX(60px);opacity:0;transition:transform .45s ease,opacity .45s ease;pointer-events:none}
+.wiz-step.on{position:relative;transform:none;opacity:1;pointer-events:auto}
+.wiz-step.prev{transform:translateX(-60px)}
+.wiz-back{margin:6px 0 0;font-size:14px}
+.wiz-back a{color:var(--muted)}
+#book{background:#F6F6F5}
+@media (max-width:860px){
+  .cut-full .cut-pop{left:16px;right:16px;top:auto;bottom:16px;width:auto;height:46%;padding:18px}
+  .cut-full .cut-pop .cut-num{font-size:40px}
+  .story-title{font-size:34px}
+}
