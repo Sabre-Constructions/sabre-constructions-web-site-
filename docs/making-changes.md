@@ -47,7 +47,9 @@ with a name like `--red`. Change it there once and it changes everywhere.
 - [ ] If you edited the styling, bump the `?v=` number on the stylesheet link in
       every page
 - [ ] If you touched the contact form, **send a real test enquiry and confirm it
-      arrives**
+      arrives**, and confirm the green "Thanks" message shows on the page. If the page
+      jumps to a Formspree page instead, the script on the page is broken. (An apostrophe
+      inside a quoted string killed it silently from 5 to 8 September 2026.)
 
 ## Things that look harmless and are not
 

@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/site.css?v=9">
+<link rel="stylesheet" href="css/site.css?v=11">
 </head>
 <body>
 <header class="topbar over">
@@ -62,7 +62,7 @@
       <p class="eyebrow">What Sabre's clients say</p>
       <div class="rating">
         <p class="v">4.5</p>
-        <div><p class="k">out of 5, from 12 Google reviews</p><p class="small">Every quote below is from Sabre's public Google listing, word for word. One of the twelve is a one-star. It's still there. <a href="testimonials/">Read all twelve &rarr;</a></p></div>
+        <div><div class="gbadge" aria-label="Google rating 4.5 out of 5 from 12 reviews"><svg class="gmark" viewBox="0 0 48 48" width="22" height="22" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.3 0 24 0 14.6 0 6.5 5.4 2.6 13.3l7.9 6.1C12.4 13.6 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 3-2.3 5.5-4.8 7.2l7.7 6c4.5-4.2 6.9-10.3 6.9-17.7z"/><path fill="#FBBC04" d="M10.5 28.6c-.5-1.5-.8-3-.8-4.6s.3-3.1.8-4.6l-7.9-6.1C.9 16.6 0 20.2 0 24s.9 7.4 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.3 0 11.6-2.1 15.5-5.7l-7.7-6c-2.1 1.4-4.8 2.3-7.8 2.3-6.3 0-11.6-4.1-13.5-9.8l-7.9 6.1C6.5 42.6 14.6 48 24 48z"/></svg><span class="gstars"><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i class="h"></i></span></div><p class="k">out of 5, from 12 Google reviews</p><p class="small">Every quote below is from Sabre's public Google listing, word for word. One of the twelve is a one-star. It's still there. <a href="testimonials/">Read all twelve &rarr;</a></p></div>
       </div>
       <div class="grid-3" style="margin-top:0">
         <blockquote class="quote"><p>&ldquo;Any house construction is fraught with dangers, stress and hidden costs. None of this happened.&rdquo;</p><cite>Roselia Finlay &middot; January 2022</cite></blockquote>
@@ -78,15 +78,9 @@
     </div>
   </section>
 
-  <section>
+  <section style="padding-bottom:28px">
     <div class="wrap story">
       <h2 class="h2">Same street. Same school.<br>A whole new house.</h2>
-      <div class="prose-copy">
-        <p>Saturday morning. The kids are on the front lawn, the neighbours wave on the way past, and you're standing at the kitchen window thinking the same thing you've thought for two years. We love it here. The house just doesn't fit us anymore.</p>
-        <p>That's where most families start with Sabre. Nathan comes out and walks through the house with you, the actual house, room by room. Where the kids sleep. Where dinner happens. What's stopped working, and what your family needs from the next one.</p>
-        <p>From there an architect Sabre works with draws your new home around your family and your block. Then Sabre builds it. Nathan takes on a handful of homes at a time, so the builder who walked your old house is the one who answers the phone right through to the day he hands you the keys.</p>
-        <p>Thirty-six years on the Bayside, and the reputation comes down to one thing. They stay with you.</p>
-      </div>
     </div>
   </section>
 
@@ -104,7 +98,7 @@
         <button class="on" data-i="0" data-h="Nathan walks your house with you." data-t="Room by room. What's stopped working, and what your family needs from the next one.">1</button>
         <button data-i="1" data-h="Your design, drawn around your family." data-t="An architect Sabre works with draws the new home for your family and your block.">2</button>
         <button data-i="2" data-h="Then Sabre builds it." data-t="The builder who walked your old house is the one on the phone, right through to the keys.">3</button>
-        <span class="small cut-note">It moves on by itself. Tap a number to hold it. The new home is Clarence, a real Sabre build.</span>
+        <span class="small cut-note">Tap a number to hold it. The new home is Clarence, a real Sabre build.</span>
       </div>
       <p style="margin-top:28px"><a class="btn" href="#enquiry">Book your walk-through with Nathan</a> <span class="small" style="margin-left:12px">No obligation. He'll ring to set a time that suits the family.</span></p>
     </div>
@@ -113,7 +107,7 @@
   (function(){
     var cut=document.getElementById('cut'); if(!cut) return;
     var imgs=cut.querySelectorAll('.cut-img'), tag=cut.querySelector('.cut-tag'), pop=cut.querySelector('.cut-pop'), bar=cut.querySelector('.cut-bar i');
-    var dots=document.querySelectorAll('.stepdots button'), STEP=5000, i=0, timer=null;
+    var dots=document.querySelectorAll('.stepdots button'), STEP=3200, i=0, timer=null;
     function show(n){
       i=n;
       imgs.forEach(function(im,k){ im.classList.toggle('on',k===n); });
@@ -168,7 +162,7 @@
         <p class="eyebrow">What families say</p>
         <div class="rating">
           <p class="v">4.5</p>
-          <div><p class="k">out of 5, from 12 Google reviews</p><p class="small">Word for word from Sabre's public Google listing. One of the twelve is a one-star. It's still there. <a href="testimonials/">Read all twelve &rarr;</a></p></div>
+          <div><div class="gbadge" aria-label="Google rating 4.5 out of 5 from 12 reviews"><svg class="gmark" viewBox="0 0 48 48" width="22" height="22" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.3 0 24 0 14.6 0 6.5 5.4 2.6 13.3l7.9 6.1C12.4 13.6 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 3-2.3 5.5-4.8 7.2l7.7 6c4.5-4.2 6.9-10.3 6.9-17.7z"/><path fill="#FBBC04" d="M10.5 28.6c-.5-1.5-.8-3-.8-4.6s.3-3.1.8-4.6l-7.9-6.1C.9 16.6 0 20.2 0 24s.9 7.4 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.3 0 11.6-2.1 15.5-5.7l-7.7-6c-2.1 1.4-4.8 2.3-7.8 2.3-6.3 0-11.6-4.1-13.5-9.8l-7.9 6.1C6.5 42.6 14.6 48 24 48z"/></svg><span class="gstars"><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i class="h"></i></span></div><p class="k">out of 5, from 12 Google reviews</p><p class="small">Word for word from Sabre's public Google listing. One of the twelve is a one-star. It's still there. <a href="testimonials/">Read all twelve &rarr;</a></p></div>
         </div>
         <div class="stack">
           <blockquote class="quote"><p>&ldquo;Frank our supervisor was great, kept us informed all the way through &amp; was fantastic to deal with.&rdquo;</p><cite>Leasa Butcher &middot; September 2020</cite></blockquote>
@@ -194,7 +188,7 @@
           </div>
         </fieldset>
 
-        <fieldset>
+        <fieldset hidden data-step="2">
           <legend>Roughly when was the house built?</legend>
           <p class="hint">Houses from before 1947 can fall under Brisbane's character rules. This is the first thing we check.</p>
           <div class="opts">
@@ -205,7 +199,7 @@
           </div>
         </fieldset>
 
-        <fieldset>
+        <fieldset hidden data-step="3">
           <label class="q" for="suburb">Which suburb?</label>
           <select id="suburb" name="suburb" required>
           <option value="" selected disabled>Choose a suburb</option>
@@ -232,28 +226,28 @@
           </select>
         </fieldset>
 
-        <fieldset>
+        <fieldset hidden data-step="4">
           <label class="q" for="name">Your name</label>
           <input type="text" id="name" name="name" autocomplete="name" required>
         </fieldset>
 
-        <fieldset>
+        <fieldset hidden data-step="5">
           <label class="q" for="email">Email</label>
           <input type="email" id="email" name="email" autocomplete="email" required>
         </fieldset>
 
-        <fieldset>
+        <fieldset hidden data-step="6">
           <label class="q" for="mobile">Mobile</label>
           <input type="tel" id="mobile" name="mobile" autocomplete="tel" required>
         </fieldset>
 
-        <fieldset>
+        <fieldset hidden data-step="7">
           <label class="q" for="address">Street address <span style="font-weight:400;color:var(--muted)">(optional)</span></label>
           <p class="hint">If you'd like us to check your specific block, add it here.</p>
           <input type="text" id="address" name="address" autocomplete="street-address">
         </fieldset>
 
-        <button class="btn" type="submit">Book my walk-through</button>
+        <p hidden data-step="submit"><button class="btn" type="submit">Book my walk-through</button></p>
         <p class="status" id="formStatus" aria-live="polite"></p>
       </form>
         <p class="small" style="margin-top:16px">Prefer to talk? <a href="tel:+61738233200">07 3823 3200</a>, Monday to Friday, 8am to 4pm.</p>
@@ -263,13 +257,24 @@
 <script>
 (function(){
   var f=document.getElementById('enquiry'), s=document.getElementById('formStatus');
+  // One question at a time. Answer the first and the next appears; answer the second and the rest appears.
+  var steps=f.querySelectorAll('[data-step]');
+  function reveal(from){
+    steps.forEach(function(el){
+      var n=el.dataset.step;
+      var show = (from>=2) ? true : (n!=='submit' && +n===from+1);
+      if(show && el.hidden){ el.hidden=false; el.classList.add('appear'); }
+    });
+  }
+  f.querySelectorAll('input[name=describes]').forEach(function(r){ r.addEventListener('change',function(){ reveal(1); }); });
+  f.querySelectorAll('input[name=built]').forEach(function(r){ r.addEventListener('change',function(){ reveal(2); }); });
   f.addEventListener('submit',function(e){
     e.preventDefault();
     var b=f.querySelector('button'); b.disabled=true; s.className='status'; s.textContent='Sending…';
     fetch(f.action,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}})
     .then(function(r){ if(!r.ok) throw new Error(r.status); return r.json(); })
-    .then(function(){ s.className='status ok'; s.textContent='Thanks. We'll look at the block and get back to you within one working day.'; f.reset(); })
-    .catch(function(){ s.className='status err'; s.textContent='That didn't send. Please call 07 3823 3200.'; b.disabled=false; });
+    .then(function(){ s.className='status ok'; s.textContent="Thanks. Nathan will ring to set a time that suits the family."; f.reset(); })
+    .catch(function(){ s.className='status err'; s.textContent="That didn't send. Please call 07 3823 3200."; b.disabled=false; });
   });
 })();
 </script>

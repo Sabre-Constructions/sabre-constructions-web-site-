@@ -250,3 +250,13 @@ footer a{color:#fff}
   .close-grid{gap:40px}
   .posts{grid-template-columns:1fr}
 }
+
+/* v10: the form unfolds one question at a time */
+.form [data-step].appear{animation:appear .5s ease}
+@keyframes appear{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+/* v11: Google mark + gold stars on the rating blocks */
+.gbadge{display:flex;align-items:center;gap:8px;margin:0 0 6px}
+.gstars{display:inline-flex;gap:2px}
+.gstars i{width:18px;height:18px;display:inline-block;background:#FBBC04;clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)}
+.gstars i.h{background:linear-gradient(90deg,#FBBC04 50%,#E6E4DF 50%)}
