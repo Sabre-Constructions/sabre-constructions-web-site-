@@ -1,10 +1,12 @@
-/* Sabre Constructions — real website. v4, 2026-09-08.
-   The look is Sabre's own signage: black ground, one red, white text, Arial Bold.
+/* Sabre Constructions — real website. v6, 2026-09-08.
+   Sabre's signage palette at screen volume: charcoal bands, one red as accent, white, Arial Bold.
    Nothing to load — Arial is on every device. Read docs/design-system.md first.
    SELF-CONTAINED on purpose: never reference anything above this folder. */
 
 :root{
-  --black:#0A0A0A;      /* the ground. Sampled from the fence banner (#090305) */
+  --black:#0A0A0A;      /* the banner's black. Used for the hero ground only */
+  --char:#1B1C1F;       /* charcoal. Every dark band, the footer. Softer than the banner's black on a screen */
+  --char-2:#111214;     /* footer */
   --red:#EB2227;        /* the print red. Buttons, the rule, one word per headline */
   --red-d:#C9151A;      /* hover */
   --white:#FFFFFF;
@@ -56,33 +58,34 @@ a{color:var(--red-d)}
 /* Sections: white by default, .band-dark flips to black. Alternate them. */
 section{padding:96px 0}
 .section-tight{padding:40px 0 96px}
-.band-dark{background:var(--black);color:var(--grey-d)}
+.band-dark{background:var(--char);color:var(--grey-d)}
 .band-dark .h1,.band-dark .h2,.band-dark .h3{color:#fff}
 .band-dark .lede,.band-dark p{color:var(--grey-d)}
 .band-dark .eyebrow{color:#8E8E96}
 .band-dark a{color:#fff}
 .band-dark .btn-ghost{color:#fff;border-color:#fff}
 .band-dark .btn-ghost:hover{background:#fff;color:var(--ink)}
-.band-red{background:var(--red);color:#fff}
-.band-red .h1,.band-red .h2,.band-red .h3,.band-red .lede,.band-red p{color:#fff}
-.band-red .eyebrow{color:rgba(255,255,255,.75)}
-.band-red .eyebrow::before{background:#fff}
-.band-red .btn{background:var(--black)}
-.band-red .btn:hover{background:#000}
+.band-red{background:var(--char);color:var(--grey-d)}
+.band-red .h1,.band-red .h2,.band-red .h3{color:#fff}.band-red .lede,.band-red p{color:var(--grey-d)}
+.band-red .eyebrow{color:#8E8E96}
+.band-red .btn{background:var(--red)}
+.band-red .btn:hover{background:var(--red-d)}
 .band-red .btn-ghost{background:transparent;color:#fff;border-color:#fff}
-.band-red .small{color:rgba(255,255,255,.75)}
+.band-red .small{color:#8E8E96}
 
-/* Header — black bar, white text. On the home page it floats over the video. */
+/* Header — white bar, dark text. On the home page it floats transparent over the video. */
 .topbar{
-  position:sticky;top:0;z-index:50;background:var(--black);color:#fff;
+  position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);color:var(--ink);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--line);
   display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px 28px;
 }
-.topbar.over{position:absolute;left:0;right:0;background:linear-gradient(180deg,rgba(10,10,10,.55),rgba(10,10,10,0))}
+.topbar.over{position:absolute;left:0;right:0;background:linear-gradient(180deg,rgba(10,10,10,.5),rgba(10,10,10,0));color:#fff;border-bottom:0;backdrop-filter:none}
 .tb-logo img{height:40px;width:auto}
+.tb-logo .logo-light{display:none}.topbar.over .logo-light{display:block}.topbar.over .logo-dark{display:none}
 .tb-nav{display:flex;gap:22px;flex-wrap:wrap}
-.tb-nav a{font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:#fff;text-decoration:none;opacity:.85}
+.tb-nav a{font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:inherit;text-decoration:none;opacity:.8}
 .tb-nav a.active,.tb-nav a:hover{opacity:1;color:var(--red)}
-.tb-phone{font-weight:700;color:#fff;text-decoration:none;white-space:nowrap;font-size:16px}
+.tb-phone{font-weight:700;color:inherit;text-decoration:none;white-space:nowrap;font-size:16px}
 .tb-phone:hover{color:var(--red)}
 
 /* Hero — the video slot. Text sits low and quiet. */
@@ -96,6 +99,7 @@ section{padding:96px 0}
 .hero-inner .eyebrow{color:#C9C9D0}
 .hero-inner .eyebrow::before{display:none}
 .hero-inner .small{color:#C9C9D0}
+.hero-cap{position:absolute;right:16px;bottom:12px;z-index:3;margin:0;font-size:11px;letter-spacing:.04em;color:rgba(255,255,255,.7)}
 
 /* Proof row */
 .creds{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
@@ -167,7 +171,7 @@ section{padding:96px 0}
 .suburbs{display:flex;flex-wrap:wrap;gap:8px 22px;justify-content:center;padding:18px 28px;background:var(--black);border-top:1px solid var(--line-d);font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:#8E8E96}
 
 /* Footer */
-footer{background:#000;color:var(--grey-d);padding:56px 0;font-size:14px;border-top:1px solid var(--line-d)}
+footer{background:var(--char-2);color:var(--grey-d);padding:56px 0;font-size:14px;border-top:1px solid var(--line-d)}
 footer a{color:#fff}
 .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}
 .foot-name{font-weight:700;font-size:18px;color:#fff;margin:0 0 8px}
@@ -197,7 +201,8 @@ footer a{color:#fff}
   section{padding:64px 0}
   .topbar{flex-wrap:wrap}
   .tb-nav{order:3;width:100%;gap:14px}
-  .topbar.over{position:sticky;background:var(--black)}
+  .topbar.over{position:sticky;background:rgba(255,255,255,.96);color:var(--ink);border-bottom:1px solid var(--line)}
+  .topbar.over .logo-light{display:none}.topbar.over .logo-dark{display:block}
   .hero{height:min(88vh,760px)}
   .hero .v-wide{display:none}.hero .v-tall{display:block}
   .grid-2,.grid-3,.creds,.team-grid,.footer-grid,.steps,.alt,.alt.flip{grid-template-columns:1fr}

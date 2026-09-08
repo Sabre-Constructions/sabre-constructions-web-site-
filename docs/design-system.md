@@ -19,8 +19,9 @@ not on this site.
 
 | Name in the code | Value | Used for |
 |---|---|---|
-| `--black` | `#0A0A0A` | The ground. Header, footer, every dark band. The brand is black-first |
-| `--red` | `#EB2227` | Buttons, the short rule above headings, stars, one word in a headline at most. Never a flooded band except the final call to action |
+| `--char` | `#1B1C1F` | Charcoal. Every dark band and the final call-to-action band. The banner's pure black read as harsh on a screen (Edward, 09-08), so this is the screen version of it |
+| `--black` | `#0A0A0A` | The hero ground behind the video only |
+| `--red` | `#EB2227` | Buttons, the short rule above headings, stars. Never a flooded band. The final call to action is a charcoal band with a red button |
 | `--white` | `#FFFFFF` | Light sections and text on black |
 | `--ink2` | `#3A3A3E` | Body text on white |
 | `--grey-d` | `#B9B9C0` | Body text on black |
@@ -53,24 +54,30 @@ the short red rule automatically.
 
 ## The rhythm
 
-Sections alternate: white, black, white, black. `<section>` is white;
+Sections alternate: white, charcoal, white, charcoal. `<section>` is white;
 `<section class="band-dark">` is black. Inside a band, a photo sits on one side
 and the words on the other (`.alt`, and `.alt.flip` to swap sides). One heading
 per screen. Generous padding. The houses are the argument, so photos go big.
 
-Every page ends on the free block check in a red band (`.band-red`), then the
-black footer.
+Every page ends on the free block check in a charcoal band (the class is still
+`.band-red` for history; it is not red), then the footer.
 
 ## The hero
 
-The home page opens on a full-bleed video with the headline low and quiet over a
-dark gradient. The header floats over it (`.topbar.over`).
+The header is white with dark text on every inner page. On the home page it floats
+transparent over the video (`.topbar.over`) with the white logo; it switches to the
+colour logo on white. Both logo files sit in the header; CSS shows one.
 
-Right now the video is Nathan's own phone clip from a real Sabre site (August
-2026, a Queenslander being raised): `assets/video/site-raise-wide.mp4` on
-desktop and `site-raise-portrait.mp4` on phones. **It is a placeholder for the
-drone flyover of a finished Sabre home** that the professional filmer will shoot.
-Swap the two files and the two poster images; nothing else changes.
+The home page opens on a full-bleed video with the headline low and quiet over a
+dark gradient.
+
+The video is a drone-style pull-back and rise over Sabre's own photo of the
+finished Clarence build: `assets/video/drone-clarence-wide.mp4` on desktop and
+`drone-clarence-portrait.mp4` on phones, 5 seconds, looping, silent. The house is
+real; the camera move was generated from the photo, so the hero carries the caption
+"Clarence, a Sabre build. The camera move is a visualisation." (rule 7). **It is a
+stand-in for real drone footage** that the professional filmer will shoot. Swap the
+two files and the two poster images, delete the caption, and nothing else changes.
 
 Inner pages open on a plain white heading block, not a hero.
 
