@@ -12,18 +12,19 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/site.css?v=8">
+<link rel="stylesheet" href="css/site.css?v=9">
 </head>
 <body>
 <header class="topbar over">
   <a class="tb-logo" href="./"><img class="logo-dark" src="assets/img/sabre-logo.png" alt="Sabre Constructions"><img class="logo-light" src="assets/img/sabre-logo-white.png" alt=""></a>
   <nav class="tb-nav">
       <a href="./" class="active">Home</a>
-      <a href="can-we-knock-it-down/">Can we knock it down?</a>
+      <a href="can-we-knock-it-down/">Old houses & the rules</a>
       <a href="designs/">Designs</a>
       <a href="gallery/">Gallery</a>
       <a href="meet-the-team/">Meet the team</a>
       <a href="testimonials/">Testimonials</a>
+      <a href="blog/">Blog</a>
       <a href="contact/">Contact</a>
   </nav>
   <a class="tb-phone" href="tel:+61738233200">07 3823 3200</a>
@@ -78,64 +79,63 @@
   </section>
 
   <section>
-    <div class="wrap grid-2 story" style="align-items:start;gap:64px">
-      <div>
-        <div class="cut" id="cut">
-          <img class="cut-img on" src="assets/img/cut-1-old-house.jpg" alt="An older Bayside house, the kind most families start in" data-tag="The house you're in now">
-          <img class="cut-img" src="assets/img/cut-2-drawings.jpg" alt="The architect's drawings of the new home" data-tag="The drawings">
-          <img class="cut-img" src="assets/img/cut-3-new-home.jpg" alt="Clarence, a home built by Sabre Constructions" data-tag="Your new family home">
-          <span class="cut-tag"></span>
-          <div class="cut-pop"><strong></strong><span></span></div>
-        </div>
-        <div class="stepdots" role="tablist" aria-label="The three steps">
-          <button class="on" data-i="0" data-h="Nathan walks your house with you." data-t="Room by room. What's stopped working, and what your family needs from the next one.">1</button>
-          <button data-i="1" data-h="Your design, drawn around your family." data-t="An architect Sabre works with draws the new home for your family and your block.">2</button>
-          <button data-i="2" data-h="Then Sabre builds it." data-t="The builder who walked your old house is the one on the phone, right through to the keys.">3</button>
-        </div>
-        <p class="small cut-note">Tap the numbers. The new home is Clarence, a real Sabre build.</p>
-      </div>
+    <div class="wrap story">
+      <h2 class="h2">Same street. Same school.<br>A whole new house.</h2>
       <div class="prose-copy">
-        <h2 class="h2">Same street. Same school.<br>A whole new house.</h2>
         <p>Saturday morning. The kids are on the front lawn, the neighbours wave on the way past, and you're standing at the kitchen window thinking the same thing you've thought for two years. We love it here. The house just doesn't fit us anymore.</p>
         <p>That's where most families start with Sabre. Nathan comes out and walks through the house with you, the actual house, room by room. Where the kids sleep. Where dinner happens. What's stopped working, and what your family needs from the next one.</p>
         <p>From there an architect Sabre works with draws your new home around your family and your block. Then Sabre builds it. Nathan takes on a handful of homes at a time, so the builder who walked your old house is the one who answers the phone right through to the day he hands you the keys.</p>
         <p>Thirty-six years on the Bayside, and the reputation comes down to one thing. They stay with you.</p>
-        <p style="margin-top:28px"><a class="btn" href="contact/">Book your walk-through with Nathan</a></p>
-        <p class="small">No obligation. He'll ring to set a time that suits the family.</p>
       </div>
+    </div>
+  </section>
+
+  <section class="section-tight" style="padding-top:0">
+    <div class="wrap-wide">
+      <div class="cut cut-full" id="cut">
+        <img class="cut-img on" src="assets/img/cut-1-old-house.jpg" alt="An older Bayside family home, cut open so you can see the rooms" data-tag="The house you're in now">
+        <img class="cut-img" src="assets/img/cut-2-drawings.jpg" alt="The architect's drawings of the new home over the old house" data-tag="The drawings">
+        <img class="cut-img" src="assets/img/cut-3-new-home.jpg" alt="Clarence, a home built by Sabre Constructions" data-tag="Your new family home">
+        <span class="cut-tag"></span>
+        <div class="cut-pop"><p class="cut-step"></p><strong></strong><span></span></div>
+        <div class="cut-bar"><i></i></div>
+      </div>
+      <div class="stepdots" role="tablist" aria-label="The three steps">
+        <button class="on" data-i="0" data-h="Nathan walks your house with you." data-t="Room by room. What's stopped working, and what your family needs from the next one.">1</button>
+        <button data-i="1" data-h="Your design, drawn around your family." data-t="An architect Sabre works with draws the new home for your family and your block.">2</button>
+        <button data-i="2" data-h="Then Sabre builds it." data-t="The builder who walked your old house is the one on the phone, right through to the keys.">3</button>
+        <span class="small cut-note">It moves on by itself. Tap a number to hold it. The new home is Clarence, a real Sabre build.</span>
+      </div>
+      <p style="margin-top:28px"><a class="btn" href="#enquiry">Book your walk-through with Nathan</a> <span class="small" style="margin-left:12px">No obligation. He'll ring to set a time that suits the family.</span></p>
     </div>
   </section>
   <script>
   (function(){
     var cut=document.getElementById('cut'); if(!cut) return;
-    var imgs=cut.querySelectorAll('.cut-img'), tag=cut.querySelector('.cut-tag'), pop=cut.querySelector('.cut-pop');
-    var dots=document.querySelectorAll('.stepdots button');
-    function show(i){
-      imgs.forEach(function(im,k){ im.classList.toggle('on',k===i); });
-      dots.forEach(function(d,k){ d.classList.toggle('on',k===i); });
-      tag.textContent=imgs[i].dataset.tag;
-      pop.querySelector('strong').textContent=dots[i].dataset.h;
-      pop.querySelector('span').textContent=dots[i].dataset.t;
+    var imgs=cut.querySelectorAll('.cut-img'), tag=cut.querySelector('.cut-tag'), pop=cut.querySelector('.cut-pop'), bar=cut.querySelector('.cut-bar i');
+    var dots=document.querySelectorAll('.stepdots button'), STEP=5000, i=0, timer=null;
+    function show(n){
+      i=n;
+      imgs.forEach(function(im,k){ im.classList.toggle('on',k===n); });
+      dots.forEach(function(d,k){ d.classList.toggle('on',k===n); });
+      tag.textContent=imgs[n].dataset.tag;
+      pop.querySelector('.cut-step').textContent='Step '+(n+1)+' of 3';
+      pop.querySelector('strong').textContent=dots[n].dataset.h;
+      pop.querySelector('span').textContent=dots[n].dataset.t;
+      pop.classList.remove('in'); void pop.offsetWidth; pop.classList.add('in');
+      bar.style.transition='none'; bar.style.width='0%'; void bar.offsetWidth;
+      bar.style.transition='width '+STEP+'ms linear'; bar.style.width='100%';
     }
-    dots.forEach(function(d){ d.addEventListener('click',function(){ show(+d.dataset.i); }); });
-    show(0);
-    var i=0, timer=setInterval(function(){ i=(i+1)%3; show(i); },5000);
-    dots.forEach(function(d){ d.addEventListener('click',function(){ clearInterval(timer); }); });
+    function start(){ stop(); timer=setInterval(function(){ show((i+1)%3); },STEP); }
+    function stop(){ if(timer){ clearInterval(timer); timer=null; } }
+    dots.forEach(function(d){ d.addEventListener('click',function(){ stop(); show(+d.dataset.i); bar.style.transition='none'; bar.style.width='0%'; }); });
+    show(0); start();
+    if('IntersectionObserver' in window){
+      new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ if(!timer && !cut.dataset.held) start(); } else { stop(); } }); },{threshold:.35}).observe(cut);
+      dots.forEach(function(d){ d.addEventListener('click',function(){ cut.dataset.held='1'; }); });
+    }
   })();
   </script>
-
-  <section class="section-tight" style="padding-top:56px">
-    <div class="wrap-wide">
-      <p class="eyebrow">Real houses, on real Bayside streets</p>
-      <div class="strip" style="grid-template-columns:repeat(4,1fr)">
-        <a href="gallery/"><img src="assets/img/proj2x-clarence.jpg" alt="Clarence, a Sabre build"></a>
-        <a href="gallery/"><img src="assets/img/proj2x-killarney79.jpg" alt="Killarney 79, a Sabre build"></a>
-        <a href="gallery/"><img src="assets/img/proj2x-marcoola.jpg" alt="Marcoola, a Sabre build"></a>
-        <a href="gallery/"><img src="assets/img/proj2x-alexandra.jpg" alt="Alexandra, a Sabre build"></a>
-      </div>
-      <p class="small"><a href="gallery/">See all seven builds &rarr;</a></p>
-    </div>
-  </section>
 
   <section>
     <div class="wrap grid-2">
@@ -153,7 +153,7 @@
 
   <section>
     <div class="wrap">
-      <p class="eyebrow">Before you ring</p>
+      <p class="eyebrow">Before you book</p>
       <h2 class="h2">A few more questions people ask.</h2>
       <div class="faq">
         <details><summary>Do we need our own plans?</summary><p>No. Start from one of <a href="designs/">six Sabre designs</a> and change what you like, or bring your own architect's drawings. Sabre builds both ways.</p></details>
@@ -162,16 +162,117 @@
       </div>
     </div>
   </section>
+  <section id="book">
+    <div class="wrap grid-2 close-grid">
+      <div>
+        <p class="eyebrow">What families say</p>
+        <div class="rating">
+          <p class="v">4.5</p>
+          <div><p class="k">out of 5, from 12 Google reviews</p><p class="small">Word for word from Sabre's public Google listing. One of the twelve is a one-star. It's still there. <a href="testimonials/">Read all twelve &rarr;</a></p></div>
+        </div>
+        <div class="stack">
+          <blockquote class="quote"><p>&ldquo;Frank our supervisor was great, kept us informed all the way through &amp; was fantastic to deal with.&rdquo;</p><cite>Leasa Butcher &middot; September 2020</cite></blockquote>
+          <blockquote class="quote"><p>&ldquo;Nathan and the gang were excellent during the build. Always around to help or offer suggestions. Would definitely recommend them.&rdquo;</p><cite>Jason Turner &middot; June 2025</cite></blockquote>
+          <blockquote class="quote"><p>&ldquo;Sabre delivered a quality build... We are extremely happy with the quality of home and would build again with Sabre.&rdquo;</p><cite>Desiree Hezlett &middot; September 2025</cite></blockquote>
+        </div>
+      </div>
+      <div>
+        <p class="eyebrow">Where most families start</p>
+        <h2 class="h2">Book a walk-through with Nathan.</h2>
+        <p class="lede">Two quick questions about the house, then how to reach you. He'll ring to set a time that suits the family. No obligation, and no need to know what you want yet.</p>
+<form class="form" id="enquiry" action="https://formspree.io/f/mwlkqyqn" method="POST">
+        <input type="hidden" name="_subject" value="Website enquiry — sabreconstructions.com.au">
+        <input type="text" name="_gotcha" class="gotcha" tabindex="-1" autocomplete="off">
 
-  <section class="band-red">
-    <div class="wrap">
-      <p class="eyebrow">Where most families start</p>
-      <h2 class="h2">A walk through your house with Nathan.</h2>
-      <p class="lede">Room by room, with the builder who'd build the next one. No obligation, and no need to know what you want yet. He'll ring to set a time that suits the family.</p>
-      <p><a class="btn" href="contact/">Book your walk-through with Nathan</a> <a class="btn btn-ghost" href="tel:+61738233200">Call 07 3823 3200</a></p>
-      <p class="small">Already thinking about a rebuild? The free block check is on the same page.</p>
+        <fieldset>
+          <legend>Which best describes you?</legend>
+          <div class="opts">
+            <label><input type="radio" name="describes" value="I own a house I'd like to replace" required><span>I own a house I'd like to replace</span></label>
+            <label><input type="radio" name="describes" value="I'm buying a block"><span>I'm buying a block</span></label>
+            <label><input type="radio" name="describes" value="I'm weighing up renovating"><span>I'm weighing up renovating</span></label>
+            <label><input type="radio" name="describes" value="Just researching"><span>Just researching</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Roughly when was the house built?</legend>
+          <p class="hint">Houses from before 1947 can fall under Brisbane's character rules. This is the first thing we check.</p>
+          <div class="opts">
+            <label><input type="radio" name="built" value="Before 1947" required><span>Before 1947</span></label>
+            <label><input type="radio" name="built" value="1950s to 70s"><span>1950s to 70s</span></label>
+            <label><input type="radio" name="built" value="1980s or later"><span>1980s or later</span></label>
+            <label><input type="radio" name="built" value="Not sure"><span>Not sure</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <label class="q" for="suburb">Which suburb?</label>
+          <select id="suburb" name="suburb" required>
+          <option value="" selected disabled>Choose a suburb</option>
+          <option>Wynnum</option>
+          <option>Wynnum West</option>
+          <option>Manly</option>
+          <option>Manly West</option>
+          <option>Lota</option>
+          <option>Hemmant</option>
+          <option>Tingalpa</option>
+          <option>Wakerley</option>
+          <option>Gumdale</option>
+          <option>Ransome</option>
+          <option>Belmont</option>
+          <option>Chandler</option>
+          <option>Capalaba</option>
+          <option>Birkdale</option>
+          <option>Thorneside</option>
+          <option>Wellington Point</option>
+          <option>Ormiston</option>
+          <option>Cleveland</option>
+          <option>Thornlands</option>
+          <option>Somewhere else</option>
+          </select>
+        </fieldset>
+
+        <fieldset>
+          <label class="q" for="name">Your name</label>
+          <input type="text" id="name" name="name" autocomplete="name" required>
+        </fieldset>
+
+        <fieldset>
+          <label class="q" for="email">Email</label>
+          <input type="email" id="email" name="email" autocomplete="email" required>
+        </fieldset>
+
+        <fieldset>
+          <label class="q" for="mobile">Mobile</label>
+          <input type="tel" id="mobile" name="mobile" autocomplete="tel" required>
+        </fieldset>
+
+        <fieldset>
+          <label class="q" for="address">Street address <span style="font-weight:400;color:var(--muted)">(optional)</span></label>
+          <p class="hint">If you'd like us to check your specific block, add it here.</p>
+          <input type="text" id="address" name="address" autocomplete="street-address">
+        </fieldset>
+
+        <button class="btn" type="submit">Book my walk-through</button>
+        <p class="status" id="formStatus" aria-live="polite"></p>
+      </form>
+        <p class="small" style="margin-top:16px">Prefer to talk? <a href="tel:+61738233200">07 3823 3200</a>, Monday to Friday, 8am to 4pm.</p>
+      </div>
     </div>
   </section>
+<script>
+(function(){
+  var f=document.getElementById('enquiry'), s=document.getElementById('formStatus');
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var b=f.querySelector('button'); b.disabled=true; s.className='status'; s.textContent='Sending…';
+    fetch(f.action,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}})
+    .then(function(r){ if(!r.ok) throw new Error(r.status); return r.json(); })
+    .then(function(){ s.className='status ok'; s.textContent='Thanks. We'll look at the block and get back to you within one working day.'; f.reset(); })
+    .catch(function(){ s.className='status err'; s.textContent='That didn't send. Please call 07 3823 3200.'; b.disabled=false; });
+  });
+})();
+</script>
 </main>
 
 <footer>
@@ -191,7 +292,7 @@
     <div>
       <p class="foot-h">Where we build</p>
       <p><a href="wynnum/">Wynnum</a> &middot; <a href="manly/">Manly</a> &middot; Lota &middot; Wakerley &middot; Capalaba &middot; Birkdale &middot; Wellington Point &middot; Cleveland and across the Bayside and Redlands</p>
-      <p><a href="can-we-knock-it-down/">Can we knock it down?</a> &middot; <a href="https://www.facebook.com/sabreconstructions">Facebook</a></p>
+      <p><a href="can-we-knock-it-down/">Old houses &amp; the rules</a> &middot; <a href="blog/">Blog</a> &middot; <a href="https://www.facebook.com/sabreconstructions">Facebook</a></p>
     </div>
   </div>
 </footer>

@@ -219,3 +219,34 @@ footer a{color:#fff}
 .stepdots button{width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:transparent;font:inherit;font-size:13px;color:var(--muted);cursor:pointer}
 .stepdots button.on{background:var(--char);color:#fff;border-color:var(--char)}
 .cut-note{margin-top:10px}
+
+/* v9: full-width auto-advancing cutaway, the close (reviews + form), the blog */
+.story .h2{max-width:22ch}
+.story .prose-copy{columns:2;column-gap:56px;margin-top:8px}
+.story .prose-copy p{break-inside:avoid;max-width:none}
+.cut-full{aspect-ratio:16/9;max-height:720px}
+.cut-full .cut-tag{font-size:13px;padding:8px 12px}
+.cut-full .cut-pop{right:24px;bottom:24px;left:auto;max-width:380px;padding:18px 20px;font-size:16px}
+.cut-full .cut-pop .cut-step{font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:var(--muted);margin:0 0 6px}
+.cut-pop{opacity:0;transform:translateY(8px)}
+.cut-pop.in{opacity:1;transform:none;transition:opacity .6s ease,transform .6s ease}
+.cut-bar{position:absolute;left:0;right:0;bottom:0;height:4px;background:rgba(255,255,255,.25)}
+.cut-bar i{display:block;height:100%;width:0;background:#fff}
+.stepdots{align-items:center;flex-wrap:wrap}
+.stepdots .cut-note{margin-left:8px}
+.close-grid{align-items:start;gap:64px}
+.close-grid .form{margin-top:20px;max-width:none}
+.stack{display:grid;gap:22px;margin-top:8px}
+.posts{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.post{display:block;text-decoration:none;color:inherit}
+.post img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:var(--r);margin-bottom:14px}
+.post .h3{margin:4px 0 8px}
+.post p{color:var(--ink2)}
+.post:hover .h3{text-decoration:underline;text-decoration-color:var(--red);text-underline-offset:4px}
+@media (max-width:860px){
+  .story .prose-copy{columns:1}
+  .cut-full{aspect-ratio:4/3;max-height:none}
+  .cut-full .cut-pop{left:16px;right:16px;max-width:none;bottom:16px}
+  .close-grid{gap:40px}
+  .posts{grid-template-columns:1fr}
+}
