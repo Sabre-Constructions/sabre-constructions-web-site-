@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/site.css?v=14">
+<link rel="stylesheet" href="css/site.css?v=15">
 </head>
 <body>
 <header class="topbar over">
@@ -89,7 +89,8 @@
       <div class="cut cut-full" id="cut">
         <img class="cut-img on" src="assets/img/cut-1-old-house.jpg" alt="An older Bayside family home, cut open so you can see the rooms" data-tag="The house you're in now">
         <img class="cut-img" src="assets/img/cut-2-drawings.jpg" alt="The architect's drawings of the new home over the old house" data-tag="The drawings">
-        <img class="cut-img" src="assets/img/cut-3-new-home.jpg" alt="Killarney 79, a home built by Sabre Constructions" data-tag="Your new family home">
+        <img class="cut-img" src="assets/img/cut-3-new-home.jpg" alt="The new two-storey family home on the same block, a visualisation" data-tag="Your new family home">
+        <div class="cut-img cut-end"><img src="assets/img/sabre-logo-white.png" alt="Sabre Constructions"><p>Bayside builders since 1990</p></div>
         <span class="cut-tag"></span>
         <div class="cut-pop"><p class="cut-step"></p><p class="cut-num"></p><strong></strong><span></span></div>
         <div class="cut-bar"><i></i></div>
@@ -97,8 +98,8 @@
       <div class="stepdots" role="tablist" aria-label="The three steps">
         <button class="on" data-i="0" data-h="Start with the house you're in." data-t="Nathan walks it with you, room by room. No obligation.">1</button>
         <button data-i="1" data-h="Drawn around your family." data-t="By an architect Sabre works with, for your block and the people on it.">2</button>
-        <button data-i="2" data-h="Welcome to your new home." data-t="Same street. Same school. Room for everyone.">3</button>
-        <span class="small cut-note">Tap a number to hold it. The new home is Killarney 79, a real Sabre build.</span>
+        <button data-i="2" data-h="Welcome to your new family home." data-t="Same street. Same school. Room for everyone.">3</button>
+        <span class="small cut-note">Tap a number to hold it. The old house and the new home are visualisations of one block, not real addresses.</span>
       </div>
       <p style="margin-top:28px"><a class="btn" href="#enquiry">Book your walk-through with Nathan</a> <span class="small" style="margin-left:12px">No obligation. He'll ring to set a time that suits the family.</span></p>
     </div>
@@ -107,26 +108,30 @@
   (function(){
     var cut=document.getElementById('cut'); if(!cut) return;
     var imgs=cut.querySelectorAll('.cut-img'), tag=cut.querySelector('.cut-tag'), pop=cut.querySelector('.cut-pop'), bar=cut.querySelector('.cut-bar i');
-    var dots=document.querySelectorAll('.stepdots button'), STEP=4000, i=0, timer=null;
+    var dots=document.querySelectorAll('.stepdots button'), DUR=[4000,4000,4000,2600], i=0, timer=null;
     function show(n){
       i=n;
       imgs.forEach(function(im,k){ im.classList.toggle('on',k===n); });
       dots.forEach(function(d,k){ d.classList.toggle('on',k===n); });
-      tag.textContent=imgs[n].dataset.tag;
-      pop.querySelector('.cut-step').textContent='Step '+(n+1)+' of 3'; pop.querySelector('.cut-num').textContent='0'+(n+1);
-      pop.querySelector('strong').textContent=dots[n].dataset.h;
-      pop.querySelector('span').textContent=dots[n].dataset.t;
-      pop.classList.remove('in'); void pop.offsetWidth; pop.classList.add('in');
+      var end = n>=dots.length;
+      tag.style.opacity = end?0:1; pop.style.opacity = end?0:'';
+      if(!end){
+        tag.textContent=imgs[n].dataset.tag;
+        pop.querySelector('.cut-step').textContent='Step '+(n+1)+' of 3';
+        pop.querySelector('strong').textContent=dots[n].dataset.h;
+        pop.querySelector('span').textContent=dots[n].dataset.t;
+        pop.classList.remove('in'); void pop.offsetWidth; pop.classList.add('in');
+      } else { pop.classList.remove('in'); }
       bar.style.transition='none'; bar.style.width='0%'; void bar.offsetWidth;
-      bar.style.transition='width '+STEP+'ms linear'; bar.style.width='100%';
+      bar.style.transition='width '+DUR[n]+'ms linear'; bar.style.width='100%';
     }
-    function start(){ stop(); timer=setInterval(function(){ show((i+1)%3); },STEP); }
-    function stop(){ if(timer){ clearInterval(timer); timer=null; } }
-    dots.forEach(function(d){ d.addEventListener('click',function(){ stop(); show(+d.dataset.i); bar.style.transition='none'; bar.style.width='0%'; }); });
+    function tick(){ timer=setTimeout(function(){ show((i+1)%imgs.length); tick(); }, DUR[i]); }
+    function start(){ stop(); tick(); }
+    function stop(){ if(timer){ clearTimeout(timer); timer=null; } }
+    dots.forEach(function(d){ d.addEventListener('click',function(){ stop(); cut.dataset.held='1'; show(+d.dataset.i); bar.style.transition='none'; bar.style.width='0%'; }); });
     show(0); start();
     if('IntersectionObserver' in window){
       new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ if(!timer && !cut.dataset.held) start(); } else { stop(); } }); },{threshold:.35}).observe(cut);
-      dots.forEach(function(d){ d.addEventListener('click',function(){ cut.dataset.held='1'; }); });
     }
   })();
   </script>
