@@ -6,7 +6,7 @@
 
 ## What this is
 
-The website for **Sabre Constructions**, a family-owned builder in Capalaba QLD,
+The website for **Sabre Constructions**, a family-owned builder based at Ransome QLD,
 building across Brisbane's Bayside and the Redlands since 1990.
 
 It is a **static website**. That means it is just files — HTML, CSS, images.
