@@ -11,10 +11,10 @@
 | Sabre Constructions — family-owned domestic and commercial builder | their own site |
 | Founded **1990** by Stewart and Cathy Brain | their Meet The Team page |
 | That is **36 years** as of 2026 | worked out from 1990 |
-| Based in Capalaba QLD; builds across Brisbane's Bayside and the Redlands | their own site |
-| **QBCC Builders Licence 328475** | their contact page |
+| Based at Ransome QLD; builds across Brisbane's Bayside and the Redlands | Nathan, 2026-09-10 (was Capalaba) |
+| **QBCC Builders Licence 15486557** | 27 Aug 2026 banner proof; **confirmed by Nathan 2026-09-10** as the number to publish |
 | Phone **07 3823 3200** · fax 07 3823 1121 | their contact page |
-| **3/73–75 Steel St, Capalaba QLD 4157** | their contact page |
+| **40 Molle Rd, Ransome QLD 4154** | Nathan, 2026-09-10. Replaced 3/73–75 Steel St, Capalaba QLD 4157 (their old contact page) |
 | **Monday to Friday, 8am–4pm** | their contact page |
 | Email **admin@sabreconstructions.com.au** | their contact page |
 | Facebook: facebook.com/sabreconstructions | their site footer |
@@ -23,10 +23,14 @@
 | Instagram account exists (icon on the banner) — handle not yet known | same banner proof |
 | Their own signage headline is **"Knock Down Rebuilds"** — Sabre's words, not ours | same banner proof |
 
-⚠️ **Two different QBCC licence numbers exist.** Their contact page says **328475**;
-the 27 Aug 2026 banner proof says **15486557**. One may be the company licence and
-the other the nominee's. Do not put either on a page until Nathan confirms which is
-which. (Flagged 2026-09-08.)
+✅ **QBCC resolved 2026-09-10.** Nathan confirmed **15486557** is the number to publish
+(the banner proof's, not the old contact page's 328475). Every page now carries 15486557.
+Master Builders Queensland No. **00352** confirmed the same day.
+
+⚠️ **The address changed to 40 Molle Rd, Ransome QLD 4154** (Nathan, 2026-09-10). The
+Google Business Profile, the Facebook page and any directory listing must be changed to
+match, character for character — a name/address/phone mismatch is the one thing that most
+reliably keeps a builder out of the map box, and the map box is the whole search plan.
 
 ⚠️ Their old site said "25+ years". They started in 1990, so that was **under**
 selling it. Use 1990 or 36 years. A real number beats a vague one.
