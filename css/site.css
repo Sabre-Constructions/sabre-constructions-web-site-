@@ -277,9 +277,11 @@ footer a{color:#fff}
 .cut-full .cut-tag{left:auto;right:16px}
 .wiz{position:relative;overflow:hidden}
 .wiz-prog{font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:var(--muted);margin:0 0 14px}
-.wiz-step{position:absolute;top:0;left:0;width:100%;transform:translateX(60px);opacity:0;transition:transform .45s ease,opacity .45s ease;pointer-events:none}
-.wiz-step.on{position:relative;transform:none;opacity:1;pointer-events:auto}
-.wiz-step.prev{transform:translateX(-60px)}
+/* The slide only runs with JS (html.js is set in <head>). Without it every step shows, stacked, and the form still posts. */
+.js .wiz-step{position:absolute;top:0;left:0;width:100%;transform:translateX(60px);opacity:0;transition:transform .45s ease,opacity .45s ease;pointer-events:none}
+.js .wiz-step.on{position:relative;transform:none;opacity:1;pointer-events:auto}
+.js .wiz-step.prev{transform:translateX(-60px)}
+html:not(.js) .wiz-prog,html:not(.js) .wiz-back{display:none}
 .wiz-back{margin:6px 0 0;font-size:14px}
 .wiz-back a{color:var(--muted)}
 #book{background:#F6F6F5}

@@ -2,6 +2,7 @@
 <html lang="en-AU">
 <head>
 <meta charset="utf-8">
+<script>document.documentElement.classList.add('js')</script>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Book a walk-through with Nathan | Sabre Constructions</title>
 <meta name="description" content="Call 0422 831 306 or visit 3/73-75 Steel St, Capalaba QLD 4157. Open Monday to Friday, 8am to 4pm.">
@@ -12,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../css/site.css?v=18">
+<link rel="stylesheet" href="../css/site.css?v=19">
 </head>
 <body>
 
@@ -48,6 +49,19 @@
       <form class="form" id="enquiry" action="https://formspree.io/f/mwlkqyqn" method="POST">
         <input type="hidden" name="_subject" value="Website enquiry — sabreconstructions.com.au">
         <input type="text" name="_gotcha" class="gotcha" tabindex="-1" autocomplete="off">
+        <!-- Campaign capture: filled by js/enquiry.js from the visit (utm_*, fbclid, gclid).
+             They ride along to Formspree (so the email shows the asset code) and to the lead ledger. -->
+        <input type="hidden" name="utm_source" value="">
+        <input type="hidden" name="utm_medium" value="">
+        <input type="hidden" name="utm_campaign" value="">
+        <input type="hidden" name="utm_content" value="">
+        <input type="hidden" name="utm_term" value="">
+        <input type="hidden" name="fbclid" value="">
+        <input type="hidden" name="gclid" value="">
+        <input type="hidden" name="landing_page" value="">
+        <input type="hidden" name="referrer" value="">
+        <input type="hidden" name="page" value="">
+        <input type="hidden" name="fill_seconds" value="">
 
         <div class="wiz" id="wiz">
   <p class="wiz-prog"><span id="wizN">1</span> of 3</p>
@@ -170,5 +184,6 @@
 
 
 
+<script src="../js/enquiry.js?v=1" defer></script>
 </body>
 </html>
