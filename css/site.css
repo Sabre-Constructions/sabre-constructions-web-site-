@@ -448,3 +448,15 @@ html:not(.js) .wiz-prog,html:not(.js) .wiz-back{display:none}
 .social svg{width:18px;height:18px}
 .social a[hidden]{display:none}
 @media (max-width:640px){.art-hero img{aspect-ratio:3/2}}
+
+/* v24: the blog index in sections with the same sticky rail (2026-09-17) */
+.blog-grid{grid-template-columns:minmax(0,1fr) 232px}
+.blog-main .onpage.inline{margin-bottom:34px}
+.blog-sec{padding:0 0 56px;border-top:0;margin-bottom:24px;scroll-margin-top:96px}
+.blog-sec + .blog-sec{padding-top:48px;border-top:1px solid var(--line)}
+.blog-sec .h2{font-size:clamp(24px,2.8vw,34px);margin-bottom:.3em}
+.blog-sec .lede{margin-bottom:28px;max-width:66ch}
+.blog-sec .posts{gap:32px 28px}
+.blog-sec .post .h3{font-size:18px}
+.blog-sec .post img{aspect-ratio:3/2}
+@media (max-width:1040px){.blog-grid{display:block}}
