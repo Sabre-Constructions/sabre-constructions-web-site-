@@ -1,4 +1,4 @@
-/* Sabre Constructions — real website. v7, 2026-09-08.
+/* Sabre Constructions — real website. v7 base, v22 article kit (2026-09-17).
    Styled for the AVATAR (campaign plan §1): a Bayside family weighing a $1M+ decision about
    their own home, reading on a phone at night. Calm, warm, light, quiet type, big photography.
    A builder since 1990 who does not need to shout. Read docs/design-system.md first.
@@ -371,3 +371,49 @@ html:not(.js) .wiz-prog,html:not(.js) .wiz-back{display:none}
   .journey .jbig img{aspect-ratio:4/3}.journey .jbig figcaption{left:16px;right:16px;bottom:16px;max-width:none}
   .jstrip{grid-template-columns:repeat(3,1fr)}
 }
+
+/* v22: the article kit — Project 24 shape on Sabre's look (2026-09-17).
+   Answer block · proof points · on-this-page · key takeaways · common questions · keep reading.
+   Hairlines and paper only. Red stays on the button. */
+.art-meta{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center;font-size:14px;color:var(--muted);margin:0 0 22px}
+.art-meta .by{display:flex;align-items:center;gap:10px;color:var(--ink2)}
+.art-meta .by img{width:34px;height:34px;border-radius:50%;object-fit:cover}
+.art-meta .by b{font-weight:600;color:var(--ink)}
+.answer{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:26px 28px;margin:8px 0 34px;max-width:66ch}
+.answer .eyebrow{margin-bottom:10px}
+.answer p{font-size:18px;line-height:1.65;margin:0 0 .8em}
+.answer p:last-child{margin-bottom:0}
+.onpage{margin:0 0 40px;padding:0 0 18px;border-bottom:1px solid var(--line);max-width:66ch}
+.onpage .eyebrow{margin-bottom:8px}
+.onpage ol{margin:0;padding-left:20px;columns:2;column-gap:32px;font-size:15px}
+.onpage li{margin-bottom:4px;break-inside:avoid}
+.onpage a{color:var(--ink2);text-decoration-color:var(--line)}
+.prose .h2{scroll-margin-top:96px}
+.proof{margin:30px 0;padding:22px 26px;border-left:2px solid var(--ink);background:var(--white);border-radius:0 var(--r) var(--r) 0}
+.proof p{font-size:18px;line-height:1.6;margin:0 0 8px;color:var(--ink)}
+.proof p b{font-weight:600}
+.proof cite{display:block;font-style:normal;font-size:14px;color:var(--muted)}
+.prose ul.pts{list-style:none;padding:0;margin:0 0 1.2em}
+.prose ul.pts li{position:relative;padding-left:20px;margin-bottom:.55em}
+.prose ul.pts li::before{content:"";position:absolute;left:0;top:.72em;width:8px;height:2px;background:var(--ink)}
+.takeaways{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:26px 28px;margin:44px 0 8px}
+.takeaways .eyebrow{margin-bottom:12px}
+.takeaways ul{margin:0;padding-left:20px}
+.takeaways li{margin-bottom:.6em}
+.takeaways li b{font-weight:600;color:var(--ink)}
+.qa{margin:0}
+.qa > div{padding:18px 0;border-top:1px solid var(--line)}
+.qa > div:last-child{border-bottom:1px solid var(--line)}
+.qa .q{font-weight:600;font-size:18px;color:var(--ink);margin:0 0 6px}
+.qa p:last-child{margin:0}
+.sources{margin-top:36px;padding-top:14px;border-top:1px solid var(--line)}
+.related .h2{font-size:clamp(22px,2.6vw,30px);margin-bottom:24px}
+.related .posts{gap:28px}
+.related .post .h3{font-size:18px}
+@media (max-width:860px){
+  .answer,.takeaways{padding:20px 20px}
+  .proof{padding:18px 20px}
+  .onpage ol{columns:1}
+  .related .posts{grid-template-columns:1fr 1fr}
+}
+@media (max-width:560px){.related .posts{grid-template-columns:1fr}}
