@@ -460,3 +460,21 @@ html:not(.js) .wiz-prog,html:not(.js) .wiz-back{display:none}
 .blog-sec .post .h3{font-size:18px}
 .blog-sec .post img{aspect-ratio:3/2}
 @media (max-width:1040px){.blog-grid{display:block}}
+
+/* v25 · click images (2026-09-17). The card/hero image sells the article; the map or diagram moves INTO the
+   article as .art-fig. The suburb/topic label is HTML over the image, never baked into the pixels. */
+.art-hero .thumb,.post .thumb{position:relative;display:block}
+.art-hero .thumb img{display:block}
+.post .thumb{margin-bottom:14px;border-radius:var(--r);overflow:clip}
+.post .thumb img{margin-bottom:0;display:block}
+.art-hero .label,.post .label{position:absolute;left:0;right:0;bottom:0;padding:64px 22px 18px;border-radius:0 0 var(--r) var(--r);background:linear-gradient(to top,rgba(34,35,42,.74),rgba(34,35,42,0));color:#fff;pointer-events:none}
+.art-hero .label span,.post .label span{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:#D9D9DE;margin-bottom:6px}
+.art-hero .label b,.post .label b{display:block;font-weight:600;letter-spacing:-.02em;line-height:1.05;font-size:clamp(28px,4vw,46px)}
+.post .label{padding:44px 16px 14px}
+.post .label span{font-size:11px;margin-bottom:3px}
+.post .label b{font-size:22px}
+.post:hover .thumb img{filter:brightness(1.04)}
+.art-fig{margin:32px 0}
+.art-fig img{width:100%;height:auto;display:block;border-radius:var(--r);border:1px solid var(--line);background:#fff}
+.art-fig figcaption{margin-top:8px}
+@media (max-width:640px){.art-hero .label{padding:48px 16px 14px}.art-hero .label b{font-size:26px}}
