@@ -81,8 +81,8 @@ that watch the video's time). The invitation and the button sit low and quiet
 over the video and fade out as the words fade in.
 
 The house is real; the camera move and the surrounding streets are generated, so
-the hero carries the caption "Clarence, a Sabre build. The camera move is a
-visualisation." **It is a stand-in for real drone footage** that the professional
+the hero carries the caption "Clarence, built by Sabre. Visualised camera move."
+(reworded 2026-09-17 at Edward's request; the disclosure stays until real footage lands). **It is a stand-in for real drone footage** that the professional
 filmer will shoot. Swap the two files and posters, delete the caption, and nothing
 else changes. The generator and encode lines are in the workshop repo
 (`tools/gen_drone_hero.py`, `docs/reference/media-pipeline.md`).
