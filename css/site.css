@@ -331,6 +331,8 @@ html:not(.js) .wiz-prog,html:not(.js) .wiz-back{display:none}
 .fab{position:fixed;right:22px;bottom:22px;z-index:60;display:inline-flex;align-items:center;gap:10px;background:var(--red);color:#fff;text-decoration:none;font-weight:600;font-size:15px;padding:14px 18px;border-radius:999px;box-shadow:0 10px 30px rgba(0,0,0,.22)}
 .fab:hover{background:var(--red-d)}
 .vids-grid{gap:48px}
+.vids-grid .vid{max-width:320px;justify-self:center}
+.vids-grid .vid video{max-height:none}
 .steps-vis{display:block}
 .stepv{margin:0 0 28px;position:relative;border-radius:var(--r);overflow:hidden;background:var(--char)}
 .stepv img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
