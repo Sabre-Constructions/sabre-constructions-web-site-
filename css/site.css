@@ -481,3 +481,7 @@ html:not(.js) .wiz-prog,html:not(.js) .wiz-back{display:none}
 .art-fig img{width:100%;height:auto;display:block;border-radius:var(--r);border:1px solid var(--line);background:#fff}
 .art-fig figcaption{margin-top:8px}
 @media (max-width:640px){.art-hero .label{padding:48px 16px 14px}.art-hero .label b{font-size:26px}}
+
+/* v29: upright video inside an article column (knockdown guide) — phone-shaped, not column-wide */
+.art-vid{width:min(300px,100%);margin:0 0 36px}
+.art-vid video{max-height:none}
