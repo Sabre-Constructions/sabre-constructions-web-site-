@@ -115,6 +115,16 @@
       .then(function () {
         if (s) { s.className = 'status ok'; s.textContent = 'Thanks. Nathan will ring to set a time that suits the family.'; }
         f.reset();
+        /* PageSense goal "Lead submitted" (custom event sabre_lead_submitted) - only once Formspree
+           has accepted it. PageSense drops pushes made before its script hooks window.pagesense.push,
+           so wait for the hook (up to 15 s), then push anyway. Same pattern as the OOP site. */
+        (function psLead(i) {
+          try {
+            var q = window.pagesense = window.pagesense || [];
+            if (q.push !== Array.prototype.push || i >= 60) { q.push(['trackEvent', 'sabre_lead_submitted']); return; }
+            setTimeout(function () { psLead(i + 1); }, 250);
+          } catch (e) {}
+        })(0);
       })
       .catch(function () {
         if (s) { s.className = 'status err'; s.textContent = "That didn't send. Please call 0422 831 306."; }
