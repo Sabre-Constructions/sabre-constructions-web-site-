@@ -115,6 +115,8 @@
       .then(function () {
         if (s) { s.className = 'status ok'; s.textContent = 'Thanks. Nathan will ring to set a time that suits the family.'; }
         f.reset();
+        /* Meta Pixel Lead (dataset 4588724778070847) - only once Formspree has accepted it. */
+        try { if (window.fbq) fbq('track', 'Lead', { content_name: 'sabre_enquiry' }); } catch (e) {}
         /* PageSense goal "Lead submitted" (custom event sabre_lead_submitted) - only once Formspree
            has accepted it. PageSense drops pushes made before its script hooks window.pagesense.push,
            so wait for the hook (up to 15 s), then push anyway. Same pattern as the OOP site. */
