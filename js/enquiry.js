@@ -117,6 +117,8 @@
         f.reset();
         /* Meta Pixel Lead (dataset 4588724778070847) - only once Formspree has accepted it. */
         try { if (window.fbq) fbq('track', 'Lead', { content_name: 'sabre_enquiry' }); } catch (e) {}
+        /* Google Ads conversion "Sabre - Enquiry form sent" - same rule: only after Formspree accepts. */
+        try { if (window.gtag) gtag('event', 'conversion', { send_to: 'AW-18431104209/PViaCLXh2a4dENGp0dRE' }); } catch (e) {}
         /* PageSense goal "Lead submitted" (custom event sabre_lead_submitted) - only once Formspree
            has accepted it. PageSense drops pushes made before its script hooks window.pagesense.push,
            so wait for the hook (up to 15 s), then push anyway. Same pattern as the OOP site. */
@@ -134,3 +136,11 @@
       });
   });
 })();
+
+/* Google Ads conversion "Sabre - Phone tap on website": any tap on a tel: link, on any page.
+   One listener here instead of an onclick on every link; the dialler still opens as normal. */
+document.addEventListener('click', function (e) {
+  var a = e.target && e.target.closest && e.target.closest('a[href^="tel:"]');
+  if (!a) return;
+  try { if (window.gtag) gtag('event', 'conversion', { send_to: 'AW-18431104209/p25lCLjh2a4dENGp0dRE' }); } catch (err) {}
+});
