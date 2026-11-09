@@ -16,7 +16,7 @@
 | Phone **07 3823 3200** · fax 07 3823 1121 | their contact page |
 | **40 Molle Rd, Ransome QLD 4154** | Nathan, 2026-09-10. Replaced 3/73–75 Steel St, Capalaba QLD 4157 (their old contact page) |
 | **Monday to Friday, 8am–4pm** | their contact page |
-| Email **admin@sabreconstructions.com.au** | their contact page |
+| Email **quotes@sabreconstructions.com.au** (quotes / enquiries). Replaced admin@ on the site | Nathan's request, 2026-11-09 |
 | Facebook: facebook.com/sabreconstructions | their site footer |
 | Mobile **0422 831 306** — the number on their public signage. **The number the website uses everywhere (Edward, 2026-09-08): it's Nathan's.** The 07 office line stays in the facts but not on the pages | fence mesh banner proof, Wild Web Print & Sign job #8574, 27 Aug 2026 (`Sabre Constructions/docs/reference/brand/`) |
 | **Master Builders Queensland member, No. 00352** | same banner proof |

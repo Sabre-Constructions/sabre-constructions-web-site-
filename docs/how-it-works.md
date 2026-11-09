@@ -59,7 +59,7 @@ previous version rather than to fix forwards in a panic.
 
 The contact form does not email directly — a plain folder of files cannot send
 email. It posts to a small form service, which emails the enquiry to
-`admin@sabreconstructions.com.au`.
+`quotes@sabreconstructions.com.au`.
 
 That service keeps a copy of every submission, so if an email ever goes missing
 the enquiry is still recoverable. **That is the whole reason it was chosen over
